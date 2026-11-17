@@ -27,10 +27,10 @@ function initNavbar() {
 
   navContainer.innerHTML = `
     <div class="container nav-container">
-      <a href="index.html" class="brand">Shreya<span>.</span>Gautam</a>
+      <a href="index-multipage.html" class="brand">Shreya<span>.</span>Gautam</a>
       
       <div class="nav-links" id="nav-links">
-        <a href="index.html" class="nav-link ${currentPage === 'home' ? 'active' : ''}">Home</a>
+        <a href="index-multipage.html" class="nav-link ${currentPage === 'home' ? 'active' : ''}">Home</a>
         <a href="about.html" class="nav-link ${currentPage === 'about' ? 'active' : ''}">About</a>
         <a href="research.html" class="nav-link ${currentPage === 'research' ? 'active' : ''}">Research</a>
         <a href="publications.html" class="nav-link ${currentPage === 'publications' ? 'active' : ''}">Publications</a>

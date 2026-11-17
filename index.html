@@ -1,99 +1,1867 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shreya Gautam | ML · NLP · Generative AI · Research</title>
-  <meta name="description" content="Shreya Gautam: Research Scientist at ISI Foundation working on NLP, generative modelling for humanitarian data, LLM evaluation, and AI safety.">
+
+  <!-- Primary Meta Tags -->
+  <title>Shreya Gautam | Research Scientist – NLP, Generative AI & AI Safety</title>
+  <meta name="title" content="Shreya Gautam | Research Scientist – NLP, Generative AI & AI Safety">
+  <meta name="description"
+    content="Research Scientist at ISI Foundation specializing in NLP, LLMs, GenAI, generative modelling for humanitarian data, bias mitigation, and AI safety. Winner of EMNLP 2023 Outstanding Paper Award.">
+  <meta name="keywords"
+    content="Shreya Gautam, Research Scientist, ISI Foundation, Natural Language Processing, NLP, Large Language Models, LLM evaluation, Generative AI, Responsible AI, AI Safety, Politecnico di Milano, Machine Learning, GenAI, Generative Modelling, Machine Learning, Computational Social Science, data for social good, Data Science">
   <meta name="author" content="Shreya Gautam">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://shreyagautamm.github.io/">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
+  <meta name="theme-color" content="#0f0a14" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#fdf4f8" media="(prefers-color-scheme: light)">
+
+  <!-- Open Graph / Facebook / LinkedIn -->
+  <meta property="og:type" content="profile">
+  <meta property="og:url" content="https://shreyagautamm.github.io/">
+  <meta property="og:title" content="Shreya Gautam | Research Scientist – NLP, Generative AI & AI Safety">
+  <meta property="og:description"
+    content="Research Scientist at ISI Foundation working on NLP, LLM evaluation, responsible AI, and generative modelling for humanitarian applications.">
+  <meta property="og:image" content="https://shreyagautamm.github.io/assets/hero-art.svg">
+  <meta property="og:site_name" content="Shreya Gautam Portfolio">
+  <meta property="profile:first_name" content="Shreya">
+  <meta property="profile:last_name" content="Gautam">
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://shreyagautamm.github.io/">
+  <meta name="twitter:title" content="Shreya Gautam | Research Scientist – NLP, Generative AI & AI Safety">
+  <meta name="twitter:description"
+    content="Research Scientist at ISI Foundation working on NLP, LLMs, generative modelling, and AI safety. EMNLP 2023 Outstanding Paper Award winner.">
+  <meta name="twitter:image" content="https://shreyagautamm.github.io/assets/hero-art.svg">
+
+  <!-- Structured Data (JSON-LD Schema.org) for Google Search & Scholar -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://shreyagautamm.github.io/#person",
+        "name": "Shreya Gautam",
+        "jobTitle": "Research Scientist",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "ISI Foundation",
+          "url": "https://www.isi.it"
+        },
+        "alumniOf": [
+          {
+            "@type": "EducationalOrganization",
+            "name": "Politecnico di Milano"
+          },
+          {
+            "@type": "EducationalOrganization",
+            "name": "Birla Institute of Technology, Mesra"
+          }
+        ],
+        "url": "https://shreyagautamm.github.io/",
+        "image": "https://shreyagautamm.github.io/assets/profile.svg",
+        "sameAs": [
+          "https://github.com/ShreyaGautamm",
+          "https://www.linkedin.com/in/shreyagautamm",
+          "https://scholar.google.com/citations?user=eaRErNwAAAAJ"
+        ],
+        "knowsAbout": [
+          "Natural Language Processing",
+          "Large Language Models",
+          "Generative Modelling",
+          "Responsible AI",
+          "AI Safety",
+          "Machine Learning",
+          "Computational Social Science"
+        ],
+        "award": [
+          "EMNLP 2023 Outstanding Paper Award"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://shreyagautamm.github.io/#website",
+        "url": "https://shreyagautamm.github.io/",
+        "name": "Shreya Gautam | Research Portfolio",
+        "description": "Research Scientist working on NLP, generative modelling, responsible AI, and AI safety.",
+        "publisher": {
+          "@id": "https://shreyagautamm.github.io/#person"
+        }
+      }
+    ]
+  }
+  </script>
+  <style>
+    :root {
+      --bg: #fdf4f8;
+      --bg-2: #fae8f0;
+      --surface: rgba(255, 255, 255, 0.85);
+      --surface-solid: #ffffff;
+      --text: #1f101b;
+      --muted: #785e6f;
+      --accent: #db2777;
+      --accent-2: #e11d48;
+      --accent-grad: linear-gradient(135deg, #db2777 0%, #e11d48 50%, #a855f7 100%);
+      --border: rgba(219, 39, 119, 0.15);
+      --chip-bg: rgba(219, 39, 119, 0.10);
+      --chip-text: #9d174d;
+      --shadow: 0 10px 30px rgba(157, 23, 77, 0.08);
+      --glow: rgba(219, 39, 119, 0.18);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) {
+        --bg: #0f0a14;
+        --bg-2: #1a1024;
+        --surface: rgba(29, 18, 38, 0.78);
+        --surface-solid: #1d1226;
+        --text: #fdf2f8;
+        --muted: #a89cb5;
+        --accent: #f472b6;
+        --accent-2: #fb7185;
+        --accent-grad: linear-gradient(135deg, #f472b6 0%, #fb7185 50%, #c084fc 100%);
+        --border: rgba(244, 114, 182, 0.18);
+        --chip-bg: rgba(244, 114, 182, 0.15);
+        --chip-text: #fbcfe8;
+        --shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+        --glow: rgba(244, 114, 182, 0.25);
+      }
+    }
+
+    :root[data-theme="dark"] {
+      --bg: #0f0a14;
+      --bg-2: #1a1024;
+      --surface: rgba(29, 18, 38, 0.78);
+      --surface-solid: #1d1226;
+      --text: #fdf2f8;
+      --muted: #a89cb5;
+      --accent: #f472b6;
+      --accent-2: #fb7185;
+      --accent-grad: linear-gradient(135deg, #f472b6 0%, #fb7185 50%, #c084fc 100%);
+      --border: rgba(244, 114, 182, 0.18);
+      --chip-bg: rgba(244, 114, 182, 0.15);
+      --chip-text: #fbcfe8;
+      --shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+      --glow: rgba(244, 114, 182, 0.25);
+    }
+
+    :root[data-theme="light"] {
+      --bg: #fdf4f8;
+      --bg-2: #fae8f0;
+      --surface: rgba(255, 255, 255, 0.85);
+      --surface-solid: #ffffff;
+      --text: #1f101b;
+      --muted: #785e6f;
+      --accent: #db2777;
+      --accent-2: #e11d48;
+      --accent-grad: linear-gradient(135deg, #db2777 0%, #e11d48 50%, #a855f7 100%);
+      --border: rgba(219, 39, 119, 0.15);
+      --chip-bg: rgba(219, 39, 119, 0.10);
+      --chip-text: #9d174d;
+      --shadow: 0 10px 30px rgba(157, 23, 77, 0.08);
+      --glow: rgba(219, 39, 119, 0.18);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 80px;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      overflow-x: hidden;
+      transition: background .4s, color .4s;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 1.25rem;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    h1,
+    h2,
+    h3 {
+      line-height: 1.25;
+    }
+
+    section {
+      position: relative;
+      padding: 5rem 0;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      letter-spacing: -0.02em;
+      margin: 0 0 0.4rem;
+    }
+
+    .section-sub {
+      color: var(--muted);
+      margin: 0 0 2.2rem;
+    }
+
+    .gradient-text {
+      background: var(--accent-grad);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    #bg-canvas {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      pointer-events: none;
+      opacity: 0.55;
+    }
+
+    #cursor-glow {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 420px;
+      height: 420px;
+      margin: -210px 0 0 -210px;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: -1;
+      background: radial-gradient(circle, var(--glow) 0%, transparent 65%);
+    }
+
+    @media (hover: none) {
+      #cursor-glow {
+        display: none;
+      }
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      transition: box-shadow .3s;
+    }
+
+    nav.scrolled {
+      box-shadow: var(--shadow);
+    }
+
+    nav .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 62px;
+    }
+
+    .brand {
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: -0.01em;
+    }
+
+    .brand span {
+      color: var(--accent);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.1rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      font-size: 0.93rem;
+      padding: 0.3rem 0;
+      position: relative;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      height: 2px;
+      width: 0;
+      background: var(--accent-grad);
+      transition: width .3s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .nav-links a:hover::after,
+    .nav-links a.active::after {
+      width: 100%;
+    }
+
+    .nav-right {
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+    }
+
+    .icon-btn {
+      background: var(--surface-solid);
+      border: 1px solid var(--border);
+      color: var(--text);
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      cursor: pointer;
+      display: grid;
+      place-items: center;
+      font-size: 1rem;
+      transition: transform .2s, border-color .2s;
+    }
+
+    .icon-btn:hover {
+      transform: translateY(-2px);
+      border-color: var(--accent);
+    }
+
+    .menu-toggle {
+      display: none;
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding-top: 4rem;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.85rem;
+      color: var(--chip-text);
+      background: var(--chip-bg);
+      padding: 0.35rem 0.85rem;
+      border-radius: 999px;
+      margin-bottom: 1.25rem;
+    }
+
+    .pulse {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #22c55e;
+      box-shadow: 0 0 0 0 rgba(34, 197, 94, .6);
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(34, 197, 94, .55);
+      }
+
+      70% {
+        box-shadow: 0 0 0 10px rgba(34, 197, 94, 0);
+      }
+
+      100% {
+        box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
+      }
+    }
+
+    .hero h1 {
+      font-size: clamp(2.6rem, 7vw, 4.6rem);
+      letter-spacing: -0.03em;
+      margin: 0 0 0.6rem;
+    }
+
+    .typed-line {
+      font-size: clamp(1.1rem, 2.6vw, 1.5rem);
+      color: var(--muted);
+      min-height: 2.2rem;
+      margin: 0 0 1.2rem;
+    }
+
+    .typed-line .cursor {
+      display: inline-block;
+      width: 2px;
+      height: 1.2em;
+      background: var(--accent);
+      margin-left: 3px;
+      vertical-align: -0.2em;
+      animation: blink 1s steps(2) infinite;
+    }
+
+    @keyframes blink {
+      50% {
+        opacity: 0;
+      }
+    }
+
+    .hero-summary {
+      max-width: 640px;
+      font-size: 1.05rem;
+      color: var(--muted);
+      margin: 0 0 2rem;
+    }
+
+    .btn-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+      margin-bottom: 3rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.72rem 1.2rem;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background: var(--surface-solid);
+      color: var(--text);
+      font-weight: 500;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: transform .2s, box-shadow .2s, border-color .2s;
+      font-family: inherit;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow);
+      text-decoration: none;
+      border-color: var(--accent);
+    }
+
+    .btn.primary {
+      background: var(--accent-grad);
+      color: #fff;
+      border-color: transparent;
+      box-shadow: 0 4px 14px var(--glow);
+    }
+
+    .btn.primary:hover {
+      color: #fff;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px var(--glow);
+      border-color: transparent;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1rem;
+      max-width: 720px;
+    }
+
+    .stat {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1rem 1.2rem;
+      backdrop-filter: blur(8px);
+    }
+
+    .stat .num {
+      font-size: 1.8rem;
+      font-weight: 700;
+    }
+
+    .stat .label {
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    .scroll-hint {
+      position: absolute;
+      bottom: 1.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      color: var(--muted);
+      font-size: 0.8rem;
+      animation: bob 2.2s ease-in-out infinite;
+    }
+
+    @keyframes bob {
+
+      0%,
+      100% {
+        transform: translate(-50%, 0);
+      }
+
+      50% {
+        transform: translate(-50%, 8px);
+      }
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 1.5rem 1.6rem;
+      backdrop-filter: blur(10px);
+      box-shadow: var(--shadow);
+      transition: transform .25s ease, box-shadow .25s ease, border-color .25s;
+      transform-style: preserve-3d;
+      will-change: transform;
+    }
+
+    .card:hover {
+      border-color: var(--accent);
+    }
+
+    .card h3 {
+      margin: 0 0 0.2rem;
+      font-size: 1.15rem;
+    }
+
+    .card .meta {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-bottom: 0.7rem;
+    }
+
+    .card p {
+      margin: 0.5rem 0;
+      color: var(--text);
+      opacity: 0.92;
+    }
+
+    .card ul {
+      margin: 0.5rem 0 0;
+      padding-left: 1.2rem;
+    }
+
+    .card li {
+      margin-bottom: 0.35rem;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.2rem;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.2rem;
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 0.9rem;
+    }
+
+    .chip {
+      font-size: 0.78rem;
+      padding: 0.22rem 0.65rem;
+      border-radius: 999px;
+      background: var(--chip-bg);
+      color: var(--chip-text);
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(26px);
+      transition: opacity .7s ease, transform .7s ease;
+    }
+
+    .reveal.in {
+      opacity: 1;
+      transform: none;
+    }
+
+    .reveal-delay-1 {
+      transition-delay: .1s;
+    }
+
+    .reveal-delay-2 {
+      transition-delay: .2s;
+    }
+
+    .reveal-delay-3 {
+      transition-delay: .3s;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 2rem;
+      align-items: start;
+    }
+
+    .about-grid p {
+      color: var(--muted);
+      font-size: 1.02rem;
+    }
+
+    .about-grid p strong {
+      color: var(--text);
+    }
+
+    .avatar {
+      aspect-ratio: 1;
+      border-radius: 24px;
+      background: var(--accent-grad);
+      display: grid;
+      place-items: center;
+      font-size: 4.5rem;
+      font-weight: 800;
+      color: #fff;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+      border: 2px solid var(--border);
+    }
+
+    .avatar img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 2;
+      border-radius: 22px;
+      transition: transform .4s ease;
+    }
+
+    .avatar:hover img {
+      transform: scale(1.04);
+    }
+
+    .avatar::after {
+      content: "";
+      position: absolute;
+      inset: -40%;
+      background: conic-gradient(from 0deg, transparent, rgba(255, 255, 255, .25), transparent 30%);
+      animation: spin 8s linear infinite;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .avatar span {
+      position: relative;
+      z-index: 1;
+    }
+
+    .card-visual {
+      width: 100%;
+      height: 130px;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 0.85rem;
+      border: 1px solid var(--border);
+      background: var(--bg-2);
+    }
+
+    .card-visual img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform .35s ease;
+    }
+
+    .card:hover .card-visual img {
+      transform: scale(1.03);
+    }
+
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1.6rem;
+    }
+
+    .filter-btn {
+      font-family: inherit;
+      font-size: 0.9rem;
+      padding: 0.45rem 1rem;
+      border-radius: 999px;
+      cursor: pointer;
+      background: var(--surface-solid);
+      border: 1px solid var(--border);
+      color: var(--muted);
+      transition: all .2s;
+    }
+
+    .filter-btn:hover {
+      color: var(--text);
+      border-color: var(--accent);
+    }
+
+    .filter-btn.active {
+      background: var(--accent-grad);
+      color: #fff;
+      border-color: transparent;
+    }
+
+    .item {
+      transition: opacity .35s, transform .35s;
+    }
+
+    .item.hidden {
+      display: none !important;
+    }
+
+    .pub {
+      display: grid;
+      grid-template-columns: 46px 1fr;
+      gap: 1rem;
+      align-items: start;
+    }
+
+    .pub-num {
+      width: 46px;
+      height: 46px;
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      font-weight: 700;
+      background: var(--chip-bg);
+      color: var(--chip-text);
+    }
+
+    .pub h3 {
+      font-size: 1.05rem;
+      margin: 0 0 0.3rem;
+    }
+
+    .pub .venue {
+      color: var(--accent);
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .pub .authors {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-top: 0.35rem;
+    }
+
+    .pub .authors strong {
+      color: var(--text);
+    }
+
+    .award {
+      display: inline-block;
+      margin-left: 0.4rem;
+      font-size: 0.75rem;
+      padding: 0.15rem 0.55rem;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #f59e0b, #f97316);
+      color: #fff;
+      font-weight: 600;
+      vertical-align: middle;
+    }
+
+    .pub-links {
+      margin-top: 0.6rem;
+      display: flex;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+      font-size: 0.9rem;
+    }
+
+    .timeline {
+      position: relative;
+      padding-left: 2rem;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 7px;
+      top: 6px;
+      bottom: 6px;
+      width: 2px;
+      background: linear-gradient(var(--accent), var(--accent-2));
+      border-radius: 2px;
+      transform-origin: top;
+      transform: scaleY(0);
+      transition: transform 1.6s ease;
+    }
+
+    .timeline.in::before {
+      transform: scaleY(1);
+    }
+
+    .tl-item {
+      position: relative;
+      margin-bottom: 1.6rem;
+    }
+
+    .tl-item::before {
+      content: "";
+      position: absolute;
+      left: -2rem;
+      top: 0.45rem;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: var(--surface-solid);
+      border: 3px solid var(--accent);
+      transform: translateX(-1px);
+      transition: background .3s, box-shadow .3s;
+    }
+
+    .tl-item:hover::before {
+      background: var(--accent);
+      box-shadow: 0 0 0 6px var(--glow);
+    }
+
+    .tl-date {
+      font-size: 0.85rem;
+      color: var(--chip-text);
+      font-weight: 600;
+    }
+
+    .tl-item h3 {
+      margin: 0.15rem 0 0.1rem;
+      font-size: 1.1rem;
+    }
+
+    .tl-item .org {
+      color: var(--muted);
+      font-size: 0.93rem;
+    }
+
+    .tl-item ul {
+      margin: 0.5rem 0 0;
+      padding-left: 1.2rem;
+      color: var(--muted);
+    }
+
+    .tl-item li {
+      margin-bottom: 0.3rem;
+    }
+
+    .tl-item.current .tl-date::after {
+      content: " · current";
+      color: #22c55e;
+    }
+
+    .project {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .project .thumb {
+      height: 140px;
+      border-radius: 12px;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.2rem;
+      background: var(--bg-2);
+      border: 1px solid var(--border);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .project .thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform .35s ease;
+    }
+
+    .project:hover .thumb img {
+      transform: scale(1.05);
+    }
+
+    .project .links {
+      margin-top: auto;
+      padding-top: 0.9rem;
+      display: flex;
+      gap: 0.9rem;
+      flex-wrap: wrap;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    .skill-group {
+      margin-bottom: 1.8rem;
+    }
+
+    .skill-group h3 {
+      font-size: 1rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.7rem;
+    }
+
+    .skill-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem;
+    }
+
+    .skill {
+      padding: 0.55rem 1rem;
+      border-radius: 12px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      font-weight: 500;
+      font-size: 0.93rem;
+      transition: transform .2s, border-color .2s, color .2s;
+      cursor: default;
+    }
+
+    .skill:hover {
+      transform: translateY(-3px) scale(1.03);
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    .award-card .big {
+      font-size: 2rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .contact-box {
+      text-align: center;
+      padding: 3.5rem 1.5rem;
+      border-radius: 24px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .contact-box::before {
+      content: "";
+      position: absolute;
+      inset: -2px;
+      background: var(--accent-grad);
+      opacity: .08;
+      z-index: 0;
+    }
+
+    .contact-box>* {
+      position: relative;
+      z-index: 1;
+    }
+
+    .contact-box p {
+      color: var(--muted);
+      max-width: 560px;
+      margin: 0.6rem auto 1.8rem;
+    }
+
+    .contact-email {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 1.4rem;
+      display: inline-block;
+    }
+
+    footer {
+      padding: 2.5rem 0;
+      color: var(--muted);
+      font-size: 0.9rem;
+      border-top: 1px solid var(--border);
+    }
+
+    footer .container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+    }
+
+    .toast {
+      position: fixed;
+      bottom: 1.4rem;
+      left: 50%;
+      transform: translate(-50%, 140%);
+      z-index: 100;
+      background: var(--text);
+      color: var(--bg);
+      padding: 0.7rem 1.2rem;
+      border-radius: 12px;
+      font-size: 0.92rem;
+      box-shadow: var(--shadow);
+      transition: transform .4s cubic-bezier(.2, .9, .3, 1.2);
+    }
+
+    .toast.show {
+      transform: translate(-50%, 0);
+    }
+
+    .to-top {
+      position: fixed;
+      right: 1.2rem;
+      bottom: 1.2rem;
+      z-index: 40;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .3s, transform .3s;
+    }
+
+    .to-top.show {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    @media (max-width: 860px) {
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .avatar {
+        max-width: 220px;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .menu-toggle {
+        display: grid;
+      }
+
+      .nav-links {
+        position: absolute;
+        top: 62px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        background: var(--surface-solid);
+        border-bottom: 1px solid var(--border);
+        padding: 0.5rem 1.25rem 1rem;
+        transform: translateY(-120%);
+        opacity: 0;
+        transition: transform .35s, opacity .35s;
+        pointer-events: none;
+      }
+
+      .nav-links.open {
+        transform: none;
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+      .nav-links li {
+        padding: 0.6rem 0;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .nav-links li:last-child {
+        border-bottom: none;
+      }
+
+      .nav-links a::after {
+        display: none;
+      }
+
+      section {
+        padding: 4rem 0;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+
+      *,
+      *::before,
+      *::after {
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto !important;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+
+      .timeline::before {
+        transform: none;
+      }
+    }
+  </style>
 </head>
-<body data-page="home">
-  <div id="site-nav"></div>
 
-  <main>
-    <section class="hero">
-      <div class="container hero-grid">
-        <div>
-          <span class="pill"><span class="pulse"></span> Open to ML, NLP, Generative AI, and Research roles</span>
-          <h1>Hi, I'm <span class="gtext">Shreya</span>.</h1>
-          <p class="typed"><span id="typed" data-phrases="Research Scientist at ISI Foundation|NLP & large language model researcher|Building with generative AI & LLM evaluation|Turning complex data into trustworthy models"></span><span class="caret"></span></p>
-          <p class="lead">I build and study language and generative models with a focus on reliability, fairness, and societal impact. Recent work spans generative modelling for food security, persona-conditioned LLM bias, and AI-generated text detection.</p>
-          
-          <div class="btn-row">
-            <a class="btn primary" href="projects.html">See my work</a>
-            <a class="btn primary" href="research.html">Research areas</a>
-            <a class="btn primary" href="contact.html">Get in touch</a>
-            <a class="btn primary" href="cv.pdf">Download CV</a>
+<body>
+
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+  <div id="cursor-glow" aria-hidden="true"></div>
+
+  <nav id="topnav">
+    <div class="container">
+      <a class="brand" href="#top">Shreya<span>.</span>Gautam</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav-right">
+        <button class="icon-btn" id="themeToggle" aria-label="Toggle light and dark theme"
+          title="Toggle theme">&#9680;</button>
+        <button class="icon-btn menu-toggle" id="menuToggle" aria-label="Open menu">&#9776;</button>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero" id="top">
+    <div class="container">
+      <div class="eyebrow"><span class="pulse"></span> Open to research collaborations and roles in NLP and AI safety
+      </div>
+      <h1>Hi, I'm <span class="gradient-text">Shreya Gautam</span></h1>
+      <p class="typed-line"><span id="typed"></span><span class="cursor"></span></p>
+      <p class="hero-summary">
+        I work at the intersection of natural language processing, large language models, and generative modelling,
+        with a focus on the behaviour, reliability, and societal impact of AI systems.
+      </p>
+      <div class="btn-row">
+        <button class="btn primary" data-copy="shreya.gautam@mail.polimi.it">Copy email</button>
+        <a class="btn primary" href="cv.pdf">Download CV</a>
+        <a class="btn primary" href="https://github.com/ShreyaGautamm" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn primary" href="https://www.linkedin.com/in/shreyagautamm" target="_blank"
+          rel="noopener">LinkedIn</a>
+        <a class="btn primary" href="https://scholar.google.com/citations?user=eaRErNwAAAAJ" target="_blank"
+          rel="noopener">Google Scholar</a>
+      </div>
+      <div class="stats">
+        <div class="stat">
+          <div class="num"><span data-count="5">0</span></div>
+          <div class="label">Publications</div>
+        </div>
+        <div class="stat">
+          <div class="num"><span data-count="23400" data-suffix="+">0</span></div>
+          <div class="label">LLM narratives in benchmark</div>
+        </div>
+        <div class="stat">
+          <div class="num"><span data-count="266" data-suffix="K+">0</span></div>
+          <div class="label">Samples curated</div>
+        </div>
+        <div class="stat">
+          <div class="num"><span data-count="2">0</span></div>
+          <div class="label">Best-paper / scholarship honours</div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-hint">scroll</div>
+  </header>
+
+  <section id="about">
+    <div class="container">
+      <h2 class="section-title reveal">About</h2>
+      <p class="section-sub reveal">A bit of background</p>
+      <div class="about-grid">
+        <div class="reveal">
+          <p>
+            I'm a Research Scientist at <strong>ISI Foundation</strong> in Turin, working on generative modelling for
+            humanitarian applications. I completed my <strong>MSc in Computer Science Engineering at Politecnico di
+              Milano</strong>
+            in March 2026, where my thesis studied gender bias in persona-conditioned LLM narratives across English and
+            Hindi.
+          </p>
+          <p>
+            Before that I did my BTech at BIT Mesra and research internships at the University of South Carolina and
+            Dalhousie University. My paper on AI-generated text detection won the <strong>Outstanding Paper Award at
+              EMNLP 2023</strong>.
+          </p>
+          <p>
+            I'm drawn to work that puts careful evaluation first: measuring what models actually do, where they fail,
+            and who is affected. I bring academic depth and hands-on engineering to that goal.
+          </p>
+        </div>
+        <div class="avatar reveal reveal-delay-1">
+          <img src="assets/profile.jpg" alt="Shreya Gautam" onerror="this.onerror=null; this.src='assets/profile.svg';">
+          <span>SG</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="research">
+    <div class="container">
+      <h2 class="section-title reveal">Research</h2>
+      <p class="section-sub reveal">Current directions and recent work</p>
+      <div class="grid-2">
+        <div class="card reveal">
+          <div class="card-visual">
+            <img src="assets/research-flows.svg"
+              alt="Generative modelling for small area estimation with Normalizing Flows" loading="lazy">
           </div>
-
-          <div class="stats">
-            <div class="stat"><div class="num" data-count="5">0</div><div class="label">Publications</div></div>
-            <div class="stat"><div class="num" data-count="23400" data-suffix="+">0</div><div class="label">LLM narratives benchmarked</div></div>
-            <div class="stat"><div class="num" data-count="266" data-suffix="K+">0</div><div class="label">Samples curated</div></div>
-            <div class="stat"><div class="num" data-count="2">0</div><div class="label">Major honours</div></div>
+          <div class="chips" style="margin-top:0;"><span class="chip">ISI Foundation</span><span class="chip">May 2026 –
+              Apr 2027</span></div>
+          <h3 style="margin-top:0.8rem;">Generative modelling for small area estimation</h3>
+          <p>
+            Context-conditioned generative approaches (Normalizing Flows and RealNVP) to reconstruct household-level
+            food
+            security distributions in data-scarce regions, fusing survey, climate, conflict, and geospatial indicators.
+          </p>
+          <p>
+            Comparing generative and Bayesian approaches with Earth Mover's Distance (EMD) and Mean Absolute Error
+            (MAE),
+            with a focus on uncertainty and reliability.
+          </p>
+          <div class="chips">
+            <span class="chip">Normalizing flows</span><span class="chip">Data fusion</span><span
+              class="chip">Uncertainty</span>
           </div>
         </div>
-        <img class="hero-art" src="assets/hero-art.svg" alt="Connected neural network diagram around an LLM label">
-      </div>
-    </section>
-
-    <!-- Role Matcher -->
-    <section style="background: var(--surface);">
-      <div class="container">
-        <h2 class="section-title reveal">Find my fit</h2>
-        <p class="section-sub reveal">Pick a specialization to see how my research and engineering experience aligns with it.</p>
-        
-        <div class="role-tabs reveal" id="role-tabs">
-          <button class="tab" data-role="ml">Machine Learning</button>
-          <button class="tab" data-role="nlp">NLP & LLMs</button>
-          <button class="tab" data-role="genai">Generative AI</button>
-          <button class="tab" data-role="ds">Data Science</button>
-          <button class="tab" data-role="research">Research Scientist</button>
-        </div>
-
-        <div class="role-panel reveal" id="role-panel"></div>
-      </div>
-    </section>
-
-    <!-- Explore Multipage Grid -->
-    <section>
-      <div class="container">
-        <h2 class="section-title reveal">Explore</h2>
-        <p class="section-sub reveal">Everything has its dedicated page with in-depth technical details, code, and filters.</p>
-        
-        <div class="grid-3">
-          <a class="card reveal" href="about.html">
-            <h3>About &rarr;</h3>
-            <p>Background, education at Polimi, research trajectory, skills matrix, and academic honours.</p>
-          </a>
-          <a class="card reveal d1" href="research.html">
-            <h3>Research &rarr;</h3>
-            <p>Generative modelling with Normalizing Flows at ISI Foundation and LLM gender bias benchmarking.</p>
-          </a>
-          <a class="card reveal d2" href="publications.html">
-            <h3>Publications &rarr;</h3>
-            <p>Five peer-reviewed papers with topic filters, BibTeX citations, and publication links.</p>
-          </a>
-          <a class="card reveal" href="projects.html">
-            <h3>Projects &rarr;</h3>
-            <p>RAG pipelines, multi-agent financial systems, satellite crop forecasting, and Hackathon builds.</p>
-          </a>
-          <a class="card reveal d1" href="experience.html">
-            <h3>Experience &rarr;</h3>
-            <p>Interactive timeline tracing research positions from 2022 to present.</p>
-          </a>
-          <a class="card reveal d2" href="contact.html">
-            <h3>Contact &rarr;</h3>
-            <p>Send a collaboration inquiry or copy contact details directly.</p>
-          </a>
+        <div class="card reveal reveal-delay-1">
+          <div class="card-visual">
+            <img src="assets/research-bias.svg"
+              alt="Personality-conditioned gender bias benchmark across 23,400+ narratives" loading="lazy">
+          </div>
+          <div class="chips" style="margin-top:0;"><span class="chip">Master's thesis</span><span
+              class="chip">Politecnico di Milano</span></div>
+          <h3 style="margin-top:0.8rem;">Personality-conditioned gender bias in LLMs</h3>
+          <p>
+            A multilingual benchmark of 23,400+ LLM-generated narratives across 50 occupations in Hindi and English.
+            Dark Triad traits amplify occupational gender bias by up to 27% across six state-of-the-art LLMs, while
+            Honesty-Humility mitigates stereotypical outputs.
+          </p>
+          <p>
+            Validated a centroid-based bias metric against human annotations (Fleiss' &kappa; = 0.66–0.69) and studied
+            the
+            trade-off between fairness and fluency with BERTScore.
+          </p>
+          <div class="chips">
+            <span class="chip">LLM bias</span><span class="chip">Responsible AI</span><span
+              class="chip">Benchmarks</span>
+          </div>
         </div>
       </div>
-    </section>
-  </main>
+      <div class="chips reveal" style="margin-top:1.6rem;">
+        <span class="chip">NLP</span><span class="chip">LLM evaluation</span><span class="chip">Computational social
+          science</span>
+        <span class="chip">Responsible AI</span><span class="chip">AI safety &amp; alignment</span><span
+          class="chip">Generative modelling</span>
+      </div>
+    </div>
+  </section>
 
-  <div id="site-footer"></div>
+  <section id="publications">
+    <div class="container">
+      <h2 class="section-title reveal">Publications</h2>
+      <p class="section-sub reveal">Peer-reviewed papers. Filter by topic.</p>
+
+      <div class="filters reveal" data-group="pubs">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="llm">LLMs &amp; NLP</button>
+        <button class="filter-btn" data-filter="rai">Responsible AI</button>
+        <button class="filter-btn" data-filter="ml">Applied ML</button>
+      </div>
+
+      <div class="grid-2" data-list="pubs">
+        <article class="card item pub tilt reveal" data-topics="llm">
+          <div class="pub-num">1</div>
+          <div>
+            <h3>SEPSIS: I Can Catch Your Lies – A New Paradigm for Deception Detection</h3>
+            <div class="venue">ACL 2025 Student Research Workshop, pp. 97–128</div>
+            <div class="authors">Rani, A., Dalal, D., <strong>Gautam, S.</strong>, Gupta, P., Jain, V., Chadha, A.,
+              Sheth, A., &amp; Das, A.</div>
+            <div class="pub-links"><a href="https://aclanthology.org/2025.acl-srw.7/">ACL Anthology</a><a
+                href="https://doi.org/10.18653/v1/2025.acl-srw.7">DOI</a></div>
+          </div>
+        </article>
+
+        <article class="card item pub tilt reveal reveal-delay-1" data-topics="llm rai">
+          <div class="pub-num">2</div>
+          <div>
+            <h3>Counter Turing Test (CT²): AI-Generated Text Detection is Not as Easy as You May Think – Introducing AI
+              Detectability Index <span class="award">Outstanding Paper Award</span></h3>
+            <div class="venue">EMNLP 2023, pp. 2206–2239</div>
+            <div class="authors">Chakraborty, M., Tonmoy, S. M. T. I., Zaman, S. M. M., Sharma, K., Barman, N. R.,
+              Gupta, C., <strong>Gautam, S.</strong>, Kumar, T., Jain, V., Chadha, A., Sheth, A. P., &amp; Das, A.</div>
+            <div class="pub-links"><a href="https://aclanthology.org/2023.emnlp-main.136/">ACL Anthology</a><a
+                href="https://doi.org/10.18653/v1/2023.emnlp-main.136">DOI</a></div>
+          </div>
+        </article>
+
+        <article class="card item pub tilt reveal" data-topics="llm rai">
+          <div class="pub-num">3</div>
+          <div>
+            <h3>Personality Shapes Gender Bias in Persona-Conditioned LLM Narratives Across English and Hindi: An
+              Empirical Investigation</h3>
+            <div class="venue">Findings of EACL 2027 (arXiv:2604.23600)</div>
+            <div class="authors"><strong>Gautam, S.</strong>*, Kumar, T.*, Chadha, A., Jain, V., &amp; Pierri, F. (*
+              equal contribution)</div>
+            <div class="pub-links"><a href="https://arxiv.org/abs/2604.23600">arXiv</a></div>
+          </div>
+        </article>
+
+        <article class="card item pub tilt reveal reveal-delay-1" data-topics="llm">
+          <div class="pub-num">4</div>
+          <div>
+            <h3>FACTIFY-5WQA: 5W Aspect-based Fact Verification through Question Answering</h3>
+            <div class="venue">ACL 2023 (Long Papers), pp. 10421–10440</div>
+            <div class="authors">Rani, A., Tonmoy, S. M. T. I., Dalal, D., <strong>Gautam, S.</strong>, Chakraborty, M.,
+              Chadha, A., Sheth, A., &amp; Das, A.</div>
+            <div class="pub-links"><a href="https://aclanthology.org/2023.acl-long.581/">ACL Anthology</a><a
+                href="https://doi.org/10.18653/v1/2023.acl-long.581">DOI</a></div>
+          </div>
+        </article>
+
+        <article class="card item pub tilt reveal" data-topics="ml">
+          <div class="pub-num">5</div>
+          <div>
+            <h3>ML-based IoT Framework for Diabetes Detection</h3>
+            <div class="venue">Wireless Personal Communications (Springer)</div>
+            <div class="pub-links"><a href="https://www.researchsquare.com/article/rs-3024165/v1">Preprint</a></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="container">
+      <h2 class="section-title reveal">Experience</h2>
+      <p class="section-sub reveal">Research roles, most recent first</p>
+      <div class="timeline" id="timeline">
+
+        <div class="tl-item current reveal">
+          <div class="tl-date">May 2026 – Apr 2027</div>
+          <h3>Research Scientist</h3>
+          <div class="org">ISI Foundation (Fondazione ISI), Turin</div>
+          <ul>
+            <li>Generative modelling for small area estimation in humanitarian settings.</li>
+            <li>Multi-source data fusion for subnational estimation across underrepresented regions.</li>
+          </ul>
+        </div>
+
+        <div class="tl-item reveal">
+          <div class="tl-date">Jul 2025 – Mar 2026</div>
+          <h3>Research Intern (Master's Thesis)</h3>
+          <div class="org">The Data Science Lab, Politecnico di Milano</div>
+          <ul>
+            <li>Built a multilingual benchmark of 23,400+ LLM-generated narratives across 50 occupations.</li>
+            <li>Evaluated six LLMs, including Llama 3, Mistral, Gemma, DeepSeek R1, GPT-5.2, and FalconMamba.</li>
+          </ul>
+        </div>
+
+        <div class="tl-item reveal">
+          <div class="tl-date">Jan 2024 – Aug 2024</div>
+          <h3>Academic Research</h3>
+          <div class="org">Politecnico di Milano</div>
+          <ul>
+            <li>Compared ChatGPT-4, Gemini, LLaMA 3, and ChatGPT-3.5 on generating UML class diagrams from informal
+              text.</li>
+            <li>Developed prompt engineering techniques that improved PlantUML code accuracy by 60%.</li>
+          </ul>
+        </div>
+
+        <div class="tl-item reveal">
+          <div class="tl-date">Sep 2022 – Jul 2023</div>
+          <h3>AI Research Intern</h3>
+          <div class="org">Artificial Intelligence Institute, University of South Carolina, Columbia, USA</div>
+          <ul>
+            <li>Co-authored three papers at ACL and EMNLP, including the EMNLP 2023 Outstanding Paper Award.</li>
+            <li>Curated a 266K+ sample dataset with GPT-3 prompt engineering and data augmentation.</li>
+            <li>Semantic Role Labeling with AllenNLP at over 95% accuracy across 390K+ Twitter and FakeNews samples.
+            </li>
+          </ul>
+        </div>
+
+        <div class="tl-item reveal">
+          <div class="tl-date">Jan 2023 – Jun 2023</div>
+          <h3>Research Intern</h3>
+          <div class="org">Birla Institute of Technology, Mesra</div>
+          <ul>
+            <li>ML system for diabetes detection with IoT data, using AutoML, EvalML, and neural networks.</li>
+            <li>Tuned models with GridSearchCV; Random Forest gave the highest accuracy.</li>
+          </ul>
+        </div>
+
+        <div class="tl-item reveal">
+          <div class="tl-date">May 2022 – Aug 2022</div>
+          <h3>MITACS Research Intern</h3>
+          <div class="org">Dalhousie University, Canada</div>
+          <ul>
+            <li>Applied ML to the CICIDS 2019 intrusion dataset, reaching 90% attack detection accuracy.</li>
+            <li>Used PCA and correlation analysis for interpretability and performance tuning.</li>
+          </ul>
+        </div>
+
+        <div class="tl-item reveal">
+          <div class="tl-date">Jan 2022 – Apr 2022</div>
+          <h3>Summer Research Training Internship</h3>
+          <div class="org">Birla Institute of Technology, Mesra</div>
+          <ul>
+            <li>Sentiment analysis with NLP and VADER, reaching 95% accuracy, with five ML models compared.</li>
+          </ul>
+        </div>
+
+        <div class="tl-item reveal">
+          <div class="tl-date">2026</div>
+          <h3>Peer Reviewer</h3>
+          <div class="org">EMNLP 2026 (invited)</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="container">
+      <h2 class="section-title reveal">Projects</h2>
+      <p class="section-sub reveal">Hackathons, applied systems, and side projects. Filter by area.</p>
+
+      <div class="filters reveal" data-group="projects">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="nlp">NLP &amp; LLMs</button>
+        <button class="filter-btn" data-filter="data">Data &amp; Geospatial</button>
+        <button class="filter-btn" data-filter="hack">Hackathons</button>
+      </div>
+
+      <div class="grid-3" data-list="projects">
+        <article class="card item project tilt reveal" data-topics="nlp">
+          <div class="thumb"><img src="assets/project-rag.svg" alt="RAG-Instruct Chatbot pipeline" loading="lazy"></div>
+          <h3>RAG-Instruct Chatbot</h3>
+          <div class="meta">Academic NLP project</div>
+          <p>A chatbot grounded in retrieved Wikipedia documents. Covers preprocessing, Word2Vec embeddings, document
+            clustering, and fine-tuning transformers and rerankers on question-document-answer triples.</p>
+          <div class="chips"><span class="chip">RAG</span><span class="chip">Rerankers</span><span
+              class="chip">Transformers</span></div>
+          <div class="links"><a href="https://github.com/ShreyaGautamm/rag-instruct-chatbot">Code &rarr;</a></div>
+        </article>
+
+        <article class="card item project tilt reveal reveal-delay-1" data-topics="nlp data">
+          <div class="thumb"><img src="assets/project-finance.svg" alt="Multi-Agent Financial Insights system"
+              loading="lazy"></div>
+          <h3>Multi-Agent Financial Insights</h3>
+          <div class="meta">Modular multi-agent system</div>
+          <p>Five agents handle price forecasting, anomaly detection, sentiment analysis, peer benchmarking, and
+            regulatory risk. An orchestrator runs them in sequence, and a coordinator agent writes an executive market
+            brief. Results appear in a Streamlit dashboard.</p>
+          <div class="chips"><span class="chip">Multi-agent</span><span class="chip">Streamlit</span><span
+              class="chip">Forecasting</span></div>
+          <div class="links"><a href="https://github.com/ShreyaGautamm/multi-agent-financial-insights">Code &rarr;</a>
+          </div>
+        </article>
+
+        <article class="card item project tilt reveal reveal-delay-2" data-topics="nlp">
+          <div class="thumb"><img src="assets/project-uml.svg" alt="LLM UML diagram generation benchmark"
+              loading="lazy"></div>
+          <h3>LLM Powerplay: UML Diagram Generation</h3>
+          <div class="meta">Comparative study of LLMs</div>
+          <p>Compared GPT-4, GPT-3.5, Google Gemini, and Meta LLaMA on generating UML class diagrams from text across
+            200 descriptions. GPT-3.5 gave the most reliable results. The study offers practical guidance for LLMs in
+            software engineering.</p>
+          <div class="chips"><span class="chip">GPT-4</span><span class="chip">PlantUML</span><span
+              class="chip">Prompting</span></div>
+          <div class="links"><a
+              href="https://drive.google.com/file/d/1VIFG40L-g5WYTszbSPcuW43A__XCwPCh/view?usp=drive_link">Read paper
+              &rarr;</a></div>
+        </article>
+
+        <article class="card item project tilt reveal" data-topics="data">
+          <div class="thumb"><img src="assets/project-pest.svg" alt="Pest Incidence Prediction with Sentinel satellite"
+              loading="lazy"></div>
+          <h3>Pest Incidence Prediction</h3>
+          <div class="meta">Satellite and weather data, with WOTR</div>
+          <p>Predicted pest incidence in crops by combining Sentinel satellite imagery with weather data. Cleaned
+            150,000+ datapoints and added geospatial features for a 3% accuracy gain. XGBoost and Random Forest
+            performed best. Supports early intervention for precision agriculture in rural India.</p>
+          <div class="chips"><span class="chip">Sentinel</span><span class="chip">XGBoost</span><span
+              class="chip">Geospatial</span></div>
+        </article>
+
+        <article class="card item project tilt reveal reveal-delay-1" data-topics="hack">
+          <div class="thumb"><img src="assets/project-musafir.svg" alt="Musafir business travel and flight routing"
+              loading="lazy"></div>
+          <h3>Musafir</h3>
+          <div class="meta">HackUPC 2024, Barcelona</div>
+          <p>A Python library that improves business travel for TravelPerk users. Features include fastest-flight
+            recommendations, tailored hotel stays, and networking suggestions.</p>
+          <div class="chips"><span class="chip">Python</span><span class="chip">APIs</span><span class="chip">UX</span>
+          </div>
+          <div class="links"><a href="https://github.com/ShreyaGautamm/Musafir">Code &rarr;</a></div>
+        </article>
+
+        <article class="card item project tilt reveal reveal-delay-2" data-topics="hack">
+          <div class="thumb"><img src="assets/project-griham.svg" alt="Griham co-housing Figma interface"
+              loading="lazy"></div>
+          <h3>Griham</h3>
+          <div class="meta">UPC Startup Challenge, Milan</div>
+          <p>A co-housing platform linking families, elderly people, couples, and singles with shared accommodation.
+            Tenants can reduce rent by contributing to household chores. I designed the full website in Figma.</p>
+          <div class="chips"><span class="chip">Figma</span><span class="chip">UX design</span><span
+              class="chip">Product</span></div>
+          <div class="links"><a
+              href="https://www.figma.com/design/bk8tB2ixXS3vIubjuIFf0l/Griham.com?node-id=0-1&p=f">Design &rarr;</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="education">
+    <div class="container">
+      <h2 class="section-title reveal">Education &amp; Awards</h2>
+      <p class="section-sub reveal">Degrees and recognition</p>
+      <div class="grid-2">
+        <div class="card tilt reveal">
+          <h3>MSc, Computer Science Engineering</h3>
+          <div class="meta">Politecnico di Milano, Milan · Sep 2023 – Mar 2026</div>
+          <p>Thesis: <em>Personality Shapes Gender Bias in Persona-Conditioned LLM Narratives Across English and
+              Hindi</em>. Advisor: Prof. Francesco Pierri.</p>
+        </div>
+        <div class="card tilt reveal reveal-delay-1">
+          <h3>BTech, Computer Science Engineering</h3>
+          <div class="meta">Birla Institute of Technology (BIT Mesra), Ranchi · Aug 2019 – Aug 2023</div>
+        </div>
+        <div class="card tilt award-card reveal">
+          <div class="big">&#127942;</div>
+          <h3>Outstanding Paper Award, EMNLP 2023</h3>
+          <p>For the Counter Turing Test (CT²) paper, presented in Singapore.</p>
+        </div>
+        <div class="card tilt award-card reveal reveal-delay-1">
+          <div class="big">&#127891;</div>
+          <h3>Lagrange Applied Research Scholarship</h3>
+          <p>Awarded for applied research work. Current project: synthetic household food security data for Mozambique
+            using conditional normalizing flows.</p>
+        </div>
+        <div class="card tilt award-card reveal">
+          <div class="big">&#11088;</div>
+          <h3>Grace Hopper Celebration India 2024</h3>
+          <p>Advancing Inclusion Scholarship, recognising my commitment to diversity and inclusion in technology.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="container">
+      <h2 class="section-title reveal">Skills</h2>
+      <p class="section-sub reveal">Tools I use day to day</p>
+
+      <div class="skill-group reveal">
+        <h3>ML &amp; AI</h3>
+        <div class="skill-chips">
+          <span class="skill">Natural Language Processing</span><span class="skill">Large Language Models</span>
+          <span class="skill">Transformers</span><span class="skill">Generative Modelling</span><span
+            class="skill">Normalizing Flows</span>
+          <span class="skill">LLM Fine-tuning</span><span class="skill">Prompt Engineering</span><span
+            class="skill">Bayesian Modelling</span>
+          <span class="skill">Uncertainty Quantification</span>
+        </div>
+      </div>
+      <div class="skill-group reveal">
+        <h3>Frameworks &amp; Libraries</h3>
+        <div class="skill-chips">
+          <span class="skill">PyTorch</span><span class="skill">TensorFlow</span><span class="skill">Keras</span>
+          <span class="skill">HuggingFace Transformers</span><span class="skill">scikit-learn</span><span
+            class="skill">XGBoost</span>
+          <span class="skill">AllenNLP</span><span class="skill">spaCy</span><span class="skill">NLTK</span><span
+            class="skill">LangChain</span>
+        </div>
+      </div>
+      <div class="skill-group reveal">
+        <h3>Programming &amp; Data</h3>
+        <div class="skill-chips">
+          <span class="skill">Python</span><span class="skill">C++</span><span class="skill">SQL</span><span
+            class="skill">pandas</span>
+          <span class="skill">NumPy</span><span class="skill">Geospatial Analysis</span><span
+            class="skill">Streamlit</span>
+          <span class="skill">PostgreSQL</span><span class="skill">MySQL</span>
+        </div>
+      </div>
+      <div class="skill-group reveal">
+        <h3>Tools &amp; Research Practice</h3>
+        <div class="skill-chips">
+          <span class="skill">Git &amp; GitHub</span><span class="skill">Jupyter</span><span class="skill">Google
+            Colab</span>
+          <span class="skill">Overleaf / LaTeX</span><span class="skill">Figma</span><span class="skill">Benchmark
+            Design</span>
+          <span class="skill">Experimental Design</span>
+        </div>
+      </div>
+      <p class="reveal" style="color:var(--muted);"><strong style="color:var(--text);">Languages:</strong> English
+        (fluent, professional) · Hindi (native)</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <div class="contact-box reveal">
+        <h2 class="section-title">Let's <span class="gradient-text">connect</span></h2>
+        <p>
+          I'm happy to talk about research collaborations, PhD opportunities, and roles in NLP, responsible AI,
+          and generative modelling. The fastest way to reach me is email.
+        </p>
+        <div class="contact-email">shreya.gautam@mail.polimi.it</div>
+        <div class="btn-row" style="justify-content:center;margin-bottom:0;">
+          <button class="btn primary" data-copy="shreya.gautam@mail.polimi.it">Copy email</button>
+          <a class="btn primary" href="https://www.linkedin.com/in/shreyagautamm" target="_blank"
+            rel="noopener">LinkedIn</a>
+          <a class="btn primary" href="https://github.com/ShreyaGautamm" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn primary" href="mailto:gautamm.shreya@gmail.com">Personal email</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <span>&copy; 2026 Shreya Gautam</span>
+      <span>Built with plain HTML, CSS, and JavaScript</span>
+    </div>
+  </footer>
+
+  <button class="icon-btn to-top" id="toTop" aria-label="Back to top">&uarr;</button>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script>
+    (function () {
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var root = document.documentElement;
+
+      var saved = null;
+      try { saved = localStorage.getItem('theme'); } catch (e) { }
+      if (saved) root.setAttribute('data-theme', saved);
+      document.getElementById('themeToggle').addEventListener('click', function () {
+        var current = root.getAttribute('data-theme') ||
+          (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        var next = current === 'dark' ? 'light' : 'dark';
+        root.setAttribute('data-theme', next);
+        try { localStorage.setItem('theme', next); } catch (e) { }
+      });
+
+      var navLinks = document.getElementById('navLinks');
+      document.getElementById('menuToggle').addEventListener('click', function () {
+        navLinks.classList.toggle('open');
+      });
+      navLinks.querySelectorAll('a').forEach(function (a) {
+        a.addEventListener('click', function () { navLinks.classList.remove('open'); });
+      });
+
+      var nav = document.getElementById('topnav');
+      var toTop = document.getElementById('toTop');
+      window.addEventListener('scroll', function () {
+        var y = window.scrollY;
+        nav.classList.toggle('scrolled', y > 10);
+        toTop.classList.toggle('show', y > 600);
+      }, { passive: true });
+      toTop.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' }); });
+
+      var navAnchors = navLinks.querySelectorAll('a[href^="#"]');
+      var sectionIO = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) {
+          if (en.isIntersecting) {
+            navAnchors.forEach(function (a) {
+              a.classList.toggle('active', a.getAttribute('href') === '#' + en.target.id);
+            });
+          }
+        });
+      }, { rootMargin: '-45% 0px -50% 0px' });
+      document.querySelectorAll('section[id]').forEach(function (s) { sectionIO.observe(s); });
+
+      var revealIO = new IntersectionObserver(function (entries, obs) {
+        entries.forEach(function (en) {
+          if (!en.isIntersecting) return;
+          en.target.classList.add('in');
+          if (en.target.hasAttribute('data-count')) animateCount(en.target);
+          obs.unobserve(en.target);
+        });
+      }, { threshold: 0.12 });
+      document.querySelectorAll('.reveal, [data-count], #timeline').forEach(function (el) { revealIO.observe(el); });
+
+      function animateCount(el) {
+        var target = parseFloat(el.getAttribute('data-count'));
+        var suffix = el.getAttribute('data-suffix') || '';
+        if (reduce) { el.textContent = target.toLocaleString() + suffix; return; }
+        var start = null;
+        function step(ts) {
+          if (!start) start = ts;
+          var p = Math.min((ts - start) / 1400, 1);
+          var eased = 1 - Math.pow(1 - p, 3);
+          el.textContent = Math.floor(eased * target).toLocaleString() + suffix;
+          if (p < 1) requestAnimationFrame(step); else el.textContent = target.toLocaleString() + suffix;
+        }
+        requestAnimationFrame(step);
+      }
+
+      var phrases = [
+        'Research Scientist at ISI Foundation',
+        'NLP & large language model researcher',
+        'Responsible AI and AI safety',
+        'Generative modelling for humanitarian data'
+      ];
+      var typedEl = document.getElementById('typed');
+      if (reduce) {
+        typedEl.textContent = phrases[0];
+      } else {
+        var pi = 0, ci = 0, deleting = false;
+        (function tick() {
+          var word = phrases[pi];
+          ci = deleting ? ci - 1 : ci + 1;
+          typedEl.textContent = word.slice(0, ci);
+          var delay = deleting ? 35 : 75;
+          if (!deleting && ci === word.length) { delay = 1800; deleting = true; }
+          else if (deleting && ci === 0) { deleting = false; pi = (pi + 1) % phrases.length; delay = 400; }
+          setTimeout(tick, delay);
+        })();
+      }
+
+      document.querySelectorAll('.filters[data-group]').forEach(function (group) {
+        var list = document.querySelector('[data-list="' + group.getAttribute('data-group') + '"]');
+        group.querySelectorAll('.filter-btn').forEach(function (btn) {
+          btn.addEventListener('click', function () {
+            group.querySelectorAll('.filter-btn').forEach(function (b) { b.classList.remove('active'); });
+            btn.classList.add('active');
+            var f = btn.getAttribute('data-filter');
+            list.querySelectorAll('.item').forEach(function (item) {
+              var topics = (item.getAttribute('data-topics') || '').split(' ');
+              var show = f === 'all' || topics.indexOf(f) !== -1;
+              item.classList.toggle('hidden', !show);
+            });
+          });
+        });
+      });
+
+      if (!reduce && window.matchMedia('(hover: hover)').matches) {
+        document.querySelectorAll('.tilt').forEach(function (card) {
+          card.addEventListener('mousemove', function (e) {
+            var r = card.getBoundingClientRect();
+            var x = (e.clientX - r.left) / r.width - 0.5;
+            var y = (e.clientY - r.top) / r.height - 0.5;
+            card.style.transform = 'perspective(900px) rotateX(' + (-y * 6) + 'deg) rotateY(' + (x * 6) + 'deg) translateY(-4px)';
+          });
+          card.addEventListener('mouseleave', function () { card.style.transform = ''; });
+        });
+        var glow = document.getElementById('cursor-glow');
+        window.addEventListener('mousemove', function (e) {
+          glow.style.transform = 'translate(' + e.clientX + 'px,' + e.clientY + 'px)';
+        }, { passive: true });
+      }
+
+      var toast = document.getElementById('toast');
+      var toastTimer;
+      function showToast(msg) {
+        toast.textContent = msg;
+        toast.classList.add('show');
+        clearTimeout(toastTimer);
+        toastTimer = setTimeout(function () { toast.classList.remove('show'); }, 2200);
+      }
+      document.querySelectorAll('[data-copy]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var value = btn.getAttribute('data-copy');
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(value).then(
+              function () { showToast('Email copied: ' + value); },
+              function () { showToast('Email: ' + value); }
+            );
+          } else {
+            showToast('Email: ' + value);
+          }
+        });
+      });
+
+      var canvas = document.getElementById('bg-canvas');
+      if (canvas && !reduce) {
+        var ctx = canvas.getContext('2d');
+        var dpr = window.devicePixelRatio || 1;
+        var pts = [], W = 0, H = 0;
+        function resize() {
+          W = canvas.clientWidth; H = canvas.clientHeight;
+          canvas.width = W * dpr; canvas.height = H * dpr;
+          ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+          var count = Math.min(70, Math.floor((W * H) / 22000));
+          pts = [];
+          for (var i = 0; i < count; i++) {
+            pts.push({
+              x: Math.random() * W, y: Math.random() * H,
+              vx: (Math.random() - 0.5) * 0.35, vy: (Math.random() - 0.5) * 0.35,
+              r: Math.random() * 1.6 + 0.6
+            });
+          }
+        }
+        resize();
+        window.addEventListener('resize', resize);
+        function frame() {
+          var dark = root.getAttribute('data-theme') === 'dark' ||
+            (!root.getAttribute('data-theme') && window.matchMedia('(prefers-color-scheme: dark)').matches);
+          var rgb = dark ? [244, 114, 182] : [219, 39, 119];
+          ctx.clearRect(0, 0, W, H);
+          for (var i = 0; i < pts.length; i++) {
+            var p = pts[i];
+            p.x += p.vx; p.y += p.vy;
+            if (p.x < 0 || p.x > W) p.vx *= -1;
+            if (p.y < 0 || p.y > H) p.vy *= -1;
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+            ctx.fillStyle = 'rgba(' + rgb.join(',') + ',0.7)';
+            ctx.fill();
+            for (var j = i + 1; j < pts.length; j++) {
+              var q = pts[j];
+              var dx = p.x - q.x, dy = p.y - q.y;
+              var d = Math.sqrt(dx * dx + dy * dy);
+              if (d < 130) {
+                ctx.beginPath();
+                ctx.moveTo(p.x, p.y);
+                ctx.lineTo(q.x, q.y);
+                ctx.strokeStyle = 'rgba(' + rgb.join(',') + ',' + (0.18 * (1 - d / 130)) + ')';
+                ctx.lineWidth = 1;
+                ctx.stroke();
+              }
+            }
+          }
+          requestAnimationFrame(frame);
+        }
+        requestAnimationFrame(frame);
+      }
+
+    })();
+  </script>
 </body>
+
 </html>
