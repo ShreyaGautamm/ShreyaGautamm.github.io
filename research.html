@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Research | Shreya Gautam – Research Scientist</title>
+  <meta name="description" content="Research focus of Shreya Gautam at ISI Foundation: Generative modelling for humanitarian data, Normalizing Flows, LLM bias benchmarking, and AI safety.">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body data-page="research">
+  <div id="site-nav"></div>
+
+  <main>
+    <div class="container page-header">
+      <h1 class="page-title">Scientific <span class="gtext">Research</span></h1>
+      <p class="page-sub">Developing trustworthy generative approaches, multimodal data fusion, and rigorous evaluation methodologies for humanitarian and societal impact.</p>
+    </div>
+
+    <!-- Active Research Areas -->
+    <section style="padding-top: 1rem;">
+      <div class="container">
+        <div class="grid-2">
+          
+          <!-- Research 1 -->
+          <div class="card reveal">
+            <div class="card-visual">
+              <img src="assets/research-flows.svg" alt="Normalizing flows transformation architecture diagram">
+            </div>
+            <div class="chips" style="margin-top: 0;">
+              <span class="chip">ISI Foundation</span>
+              <span class="chip">May 2026 – Apr 2027</span>
+              <span class="chip">Turin, Italy</span>
+            </div>
+            <h3 style="margin-top: 0.8rem;">Generative Modelling for Small Area Estimation</h3>
+            <p>
+              Reconstructing household-level food security and socioeconomic indicators in data-scarce and conflict-affected regions. We apply context-conditioned generative approaches—specifically Normalizing Flows and RealNVP—to model complex multimodal distributions without unrealistic Gaussian assumptions.
+            </p>
+            <p>
+              The system fuses ground-truth household surveys with heterogeneous satellite imagery, climate indices, and conflict event databases. We benchmark generative models against classical Bayesian hierarchical estimators using Earth Mover's Distance (EMD) and Mean Absolute Error (MAE), focusing on calibration under distribution shift.
+            </p>
+            <div class="chips">
+              <span class="chip">Normalizing Flows</span>
+              <span class="chip">RealNVP</span>
+              <span class="chip">Multimodal Data Fusion</span>
+              <span class="chip">Earth Mover's Distance</span>
+              <span class="chip">Food Security</span>
+            </div>
+          </div>
+
+          <!-- Research 2 -->
+          <div class="card reveal d1">
+            <div class="card-visual">
+              <img src="assets/research-bias.svg" alt="Personality-conditioned gender bias benchmark bar graph">
+            </div>
+            <div class="chips" style="margin-top: 0;">
+              <span class="chip">Master's Thesis</span>
+              <span class="chip">Politecnico di Milano</span>
+              <span class="chip">2025 – 2026</span>
+            </div>
+            <h3 style="margin-top: 0.8rem;">Personality-Conditioned Gender Bias in LLMs</h3>
+            <p>
+              An empirical benchmark evaluating how psychological persona conditioning influences occupational gender stereotyping in frontier LLMs across English and Hindi. We generated and benchmarked 23,400+ narratives across 50 standardized occupations.
+            </p>
+            <p>
+              Our findings demonstrate that persona prompts encoding Dark Triad traits (Machiavellianism, Narcissism, Psychopathy) amplify gender bias by up to 27% across six state-of-the-art models. Conversely, conditioning on Honesty-Humility mitigates stereotypical outputs by up to 18%. Validated with a centroid-based vector metric against human annotators (Fleiss' &kappa; = 0.66–0.69).
+            </p>
+            <div class="chips">
+              <span class="chip">LLM Bias Benchmarking</span>
+              <span class="chip">Persona Conditioning</span>
+              <span class="chip">Multilingual NLP (Hindi/English)</span>
+              <span class="chip">Responsible AI</span>
+              <span class="chip">BERTScore</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Research Pillars -->
+    <section style="background: var(--surface);">
+      <div class="container">
+        <h2 class="section-title reveal">Core Research Pillars</h2>
+        <p class="section-sub reveal">Three key questions guiding my scientific investigations.</p>
+
+        <div class="grid-3">
+          <div class="card reveal">
+            <h3>1. Evaluation First</h3>
+            <p>Standard benchmark numbers often mask catastrophic failure modes. My research designs stress tests, counterfactual perturbations, and centroid metrics that expose the true boundaries of model capability.</p>
+          </div>
+
+          <div class="card reveal d1">
+            <h3>2. Societal & Humanitarian Focus</h3>
+            <p>Applying machine learning where it matters most: climate resilience, food security distributions, and algorithmic fairness for marginalized and non-Western demographic contexts.</p>
+          </div>
+
+          <div class="card reveal d2">
+            <h3>3. AI Safety & Detection</h3>
+            <p>Investigating synthetic vs. human content boundaries, model hallucination vulnerabilities, and behavioral shifts when language models adopt adversarial personas.</p>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 3rem;" class="reveal">
+          <a class="btn primary" href="publications.html">View My Publications &rarr;</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+</body>
+</html>

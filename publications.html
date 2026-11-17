@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Publications | Shreya Gautam – Research Scientist</title>
+  <meta name="description" content="Peer-reviewed scientific publications by Shreya Gautam across NLP, LLM evaluation, Responsible AI, and Applied Machine Learning.">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body data-page="publications">
+  <div id="site-nav"></div>
+
+  <main>
+    <div class="container page-header">
+      <h1 class="page-title">Peer-Reviewed <span class="gtext">Publications</span></h1>
+      <p class="page-sub">Five peer-reviewed papers spanning large language models, AI-generated text detection, fairness, and health informatics. Filter by research domain.</p>
+    </div>
+
+    <section style="padding-top: 1rem;">
+      <div class="container">
+        
+        <!-- Filters -->
+        <div class="filters reveal" data-group="pubs">
+          <button class="filter-btn active" data-filter="all">All Topics</button>
+          <button class="filter-btn" data-filter="llm">LLMs &amp; NLP</button>
+          <button class="filter-btn" data-filter="rai">Responsible AI &amp; Safety</button>
+          <button class="filter-btn" data-filter="ml">Applied ML</button>
+        </div>
+
+        <div id="pub-list">
+          
+          <!-- Publication 1 -->
+          <article class="pub-card reveal" data-topics="llm">
+            <div class="pub-num">01</div>
+            <div style="flex: 1;">
+              <h3 class="pub-title">SEPSIS: I Can Catch Your Lies – A New Paradigm for Deception Detection</h3>
+              <div class="pub-venue">ACL 2025 Student Research Workshop, pp. 97–128</div>
+              <div class="pub-authors">Rani, A., Dalal, D., <strong>Gautam, S.</strong>, Gupta, P., Jain, V., Chadha, A., Sheth, A., &amp; Das, A.</div>
+              <div class="pub-links">
+                <a class="btn" style="padding: 0.35rem 0.8rem; font-size: 0.85rem;" href="https://aclanthology.org/2025.acl-srw.7/" target="_blank" rel="noopener">ACL Anthology &rarr;</a>
+                <a class="btn" style="padding: 0.35rem 0.8rem; font-size: 0.85rem;" href="https://doi.org/10.18653/v1/2025.acl-srw.7" target="_blank" rel="noopener">DOI</a>
+                <button class="btn bibtex-toggle-btn" style="padding: 0.35rem 0.8rem; font-size: 0.85rem;" data-target="bib-1">BibTeX</button>
+              </div>
+              <div class="bibtex-box" id="bib-1">@inproceedings{rani-etal-2025-sepsis,
+  title = "SEPSIS: I Can Catch Your Lies – A New Paradigm for Deception Detection",
+  author = "Rani, A. and Dalal, D. and Gautam, Shreya and Gupta, P. and Jain, V. and Chadha, A. and Sheth, A. and Das, A.",
+  booktitle = "Proceedings of the ACL 2025 Student Research Workshop",
+  pages = "97--128",
+  year = "2025"
+}</div>
+            </div>
+          </article>
+
+          <!-- Publication 2 -->
+          <article class="pub-card reveal" data-topics="llm rai">
+            <div class="pub-num">02</div>
+            <div style="flex: 1;">
+              <h3 class="pub-title">
+                Counter Turing Test (CT²): AI-Generated Text Detection is Not as Easy as You May Think – Introducing AI Detectability Index
+                <span class="chip" style="background: rgba(34, 197, 94, 0.2); color: #22c55e; border-color: #22c55e; font-size: 0.75rem; vertical-align: middle; margin-left: 0.5rem;">★ Outstanding Paper Award</span>
+              </h3>
+              <div class="pub-venue">EMNLP 2023, pp. 2206–2239</div>
+              <div class="pub-authors">Chakraborty, M., Tonmoy, S. M. T. I., Zaman, S. M. M., Sharma, K., Barman, N. R., Gupta, C., <strong>Gautam, S.</strong>, Kumar, T., Jain, V., Chadha, A., Sheth, A. P., &amp; Das, A.</div>
+              <div class="pub-links">
+                <a class="btn" style="padding: 0.35rem 0.8rem; font-size: 0.85rem;" href="https://aclanthology.org/2023.emnlp-main.136/" target="_blank" rel="noopener">ACL Anthology &rarr;</a>
+                <a class="btn" style="padding: 0.35rem 0.8rem; font-size: 0.85rem;" href="https://doi.org/10.18653/v1/2023.emnlp-main.136" target="_blank" rel="noopener">DOI</a>
+                <button class="btn bibtex-toggle-btn" style="padding: 0.35rem 0.8rem; font-size: 0.85rem;" data-target="bib-2">BibTeX</button>
+              </div>
+              <div class="bibtex-box" id="bib-2">@inproceedings{chakraborty-etal-2023-counter,
+  title = "Counter Turing Test (CT²): AI-Generated Text Detection is Not as Easy as You May Think",
+  author = "Chakraborty, M. and Tonmoy, S. and Zaman, S. and Sharma, K. and Gautam, Shreya and Das, A.",
+  booktitle = "Proceedings of EMNLP 2023",
+  pages = "2206--2239",
+  year = "2023"
+}</div>
+            </div>
+          </article>
+
+          <!-- Publication 3 -->
+          <article class="pub-card reveal" data-topics="llm rai">
+            <div class="pub-num">03</div>
+            <div style="flex: 1;">
+              <h3 class="pub-title">Personality Shapes Gender Bias in Persona-Conditioned LLM Narratives Across English and Hindi: An Empirical Investigation</h3>
+              <div class="pub-venue">Findings of EACL 2027 (arXiv:2604.23600)</div>
+              <div class="pub-authors"><strong>Gautam, S.</strong>*, Kumar, T.*, Chadha, A., Jain, V., &amp; Pierri, F. (* equal contribution)</div>
+              <div class="pub-links">
+                <a class="btn" style="padding: 0.35rem 0.8rem; font-size: 0.85rem;" href="https://arxiv.org/abs/2604.23600" target="_blank" rel="noopener">arXiv Preprint &rarr;</a>
+                <button class="btn bibtex-toggle-btn" style="padding: 0.35rem 0.8rem; font-size: 0.85rem;" data-target="bib-3">BibTeX</button>
+              </div>
+              <div class="bibtex-box" id="bib-3">@article{gautam2026personality,
+  title = "Personality Shapes Gender Bias in Persona-Conditioned LLM Narratives Across English and Hindi",
+  author = "Gautam, Shreya and Kumar, T. and Chadha, A. and Jain, V. and Pierri, F.",
+  journal = "arXiv preprint arXiv:2604.23600",
+  year = "2026"
+}</div>
+            </div>
+          </article>
+
+          <!-- Publication 4 -->
+          <article class="pub-card reveal" data-topics="llm">
+            <div class="pub-num">04</div>
+            <div style="flex: 1;">
+              <h3 class="pub-title">FACTIFY-5WQA: 5W Aspect-based Fact Verification through Question Answering</h3>
+              <div class="pub-venue">ACL 2023 (Long Papers), pp. 10421–10440</div>
+              <div class="pub-authors">Rani, A., Tonmoy, S. M. T. I., Dalal, D., <strong>Gautam, S.</strong>, Chakraborty, M., Chadha, A., Sheth, A., &amp; Das, A.</div>
+              <div class="pub-links">
+                <a class="btn" style="padding: 0.35rem 0.8rem; font-size: 0.85rem;" href="https://aclanthology.org/2023.acl-long.581/" target="_blank" rel="noopener">ACL Anthology &rarr;</a>
+                <a class="btn" style="padding: 0.35rem 0.8rem; font-size: 0.85rem;" href="https://doi.org/10.18653/v1/2023.acl-long.581" target="_blank" rel="noopener">DOI</a>
+                <button class="btn bibtex-toggle-btn" style="padding: 0.35rem 0.8rem; font-size: 0.85rem;" data-target="bib-4">BibTeX</button>
+              </div>
+              <div class="bibtex-box" id="bib-4">@inproceedings{rani-etal-2023-factify,
+  title = "FACTIFY-5WQA: 5W Aspect-based Fact Verification through Question Answering",
+  author = "Rani, A. and Tonmoy, S. and Dalal, D. and Gautam, Shreya and Chakraborty, M. and Chadha, A. and Sheth, A. and Das, A.",
+  booktitle = "Proceedings of ACL 2023",
+  pages = "10421--10440",
+  year = "2023"
+}</div>
+            </div>
+          </article>
+
+          <!-- Publication 5 -->
+          <article class="pub-card reveal" data-topics="ml">
+            <div class="pub-num">05</div>
+            <div style="flex: 1;">
+              <h3 class="pub-title">ML-based IoT Framework for Diabetes Detection</h3>
+              <div class="pub-venue">Wireless Personal Communications (Springer Nature)</div>
+              <div class="pub-authors">Gautam, S., et al.</div>
+              <div class="pub-links">
+                <a class="btn" style="padding: 0.35rem 0.8rem; font-size: 0.85rem;" href="https://www.researchsquare.com/article/rs-3024165/v1" target="_blank" rel="noopener">ResearchSquare Preprint &rarr;</a>
+                <button class="btn bibtex-toggle-btn" style="padding: 0.35rem 0.8rem; font-size: 0.85rem;" data-target="bib-5">BibTeX</button>
+              </div>
+              <div class="bibtex-box" id="bib-5">@article{gautam-diabetes-ml,
+  title = "ML-based IoT Framework for Diabetes Detection",
+  author = "Gautam, Shreya and colleagues",
+  journal = "Wireless Personal Communications",
+  publisher = "Springer",
+  year = "2023"
+}</div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+</body>
+</html>

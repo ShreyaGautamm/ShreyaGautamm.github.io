@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | Shreya Gautam – Research Scientist</title>
+  <meta name="description" content="Applied systems, hackathon builds, and open-source projects by Shreya Gautam across RAG, multi-agent LLM systems, satellite forecasting, and UI/UX design.">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body data-page="projects">
+  <div id="site-nav"></div>
+
+  <main>
+    <div class="container page-header">
+      <h1 class="page-title">Engineering &amp; <span class="gtext">Projects</span></h1>
+      <p class="page-sub">Applied AI systems, multi-agent frameworks, satellite geospatial forecasting, and competitive hackathon prototypes. Filter by domain.</p>
+    </div>
+
+    <section style="padding-top: 1rem;">
+      <div class="container">
+        
+        <!-- Filters -->
+        <div class="filters reveal" data-group="projects">
+          <button class="filter-btn active" data-filter="all">All Projects</button>
+          <button class="filter-btn" data-filter="nlp">NLP &amp; LLMs</button>
+          <button class="filter-btn" data-filter="data">Data &amp; Geospatial</button>
+          <button class="filter-btn" data-filter="hack">Hackathons &amp; UX</button>
+        </div>
+
+        <div class="grid-3" id="project-list">
+          
+          <!-- Project 1 -->
+          <article class="card project-card reveal" data-topics="nlp">
+            <div class="project-thumb">
+              <img src="assets/project-rag.svg" alt="RAG-Instruct Chatbot pipeline">
+            </div>
+            <h3>RAG-Instruct Chatbot</h3>
+            <p style="color: var(--primary); font-size: 0.85rem; font-weight: 600; margin-bottom: 0.5rem;">Academic NLP Project</p>
+            <p>A domain-grounded chatbot utilizing Wikipedia document retrieval. Features custom text preprocessing, dense Word2Vec document embeddings, hierarchical clustering, and fine-tuning transformer rerankers on question-document-answer triplets.</p>
+            <div class="chips" style="margin-top: auto; margin-bottom: 1rem;">
+              <span class="chip">RAG</span>
+              <span class="chip">Transformers</span>
+              <span class="chip">Rerankers</span>
+              <span class="chip">PyTorch</span>
+            </div>
+            <a class="btn" href="https://github.com/ShreyaGautamm/rag-instruct-chatbot" target="_blank" rel="noopener">GitHub Code &rarr;</a>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="card project-card reveal d1" data-topics="nlp data">
+            <div class="project-thumb">
+              <img src="assets/project-finance.svg" alt="Multi-Agent Financial Insights system">
+            </div>
+            <h3>Multi-Agent Financial Insights</h3>
+            <p style="color: var(--primary); font-size: 0.85rem; font-weight: 600; margin-bottom: 0.5rem;">Modular Multi-Agent System</p>
+            <p>An orchestration of five autonomous agents handling price forecasting, anomaly detection, market sentiment analysis, peer benchmarking, and regulatory compliance. An executive coordinator writes structured daily market briefs inside an interactive Streamlit UI.</p>
+            <div class="chips" style="margin-top: auto; margin-bottom: 1rem;">
+              <span class="chip">Multi-Agent</span>
+              <span class="chip">LangChain</span>
+              <span class="chip">Forecasting</span>
+              <span class="chip">Streamlit</span>
+            </div>
+            <a class="btn" href="https://github.com/ShreyaGautamm/multi-agent-financial-insights" target="_blank" rel="noopener">GitHub Code &rarr;</a>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="card project-card reveal d2" data-topics="nlp">
+            <div class="project-thumb">
+              <img src="assets/project-uml.svg" alt="LLM UML diagram generation benchmark">
+            </div>
+            <h3>LLM Powerplay: UML Generation</h3>
+            <p style="color: var(--primary); font-size: 0.85rem; font-weight: 600; margin-bottom: 0.5rem;">Comparative LLM Benchmark</p>
+            <p>Empirical study comparing GPT-4, GPT-3.5, Google Gemini, and Meta LLaMA on generating syntactic PlantUML class diagrams from software requirements across 200 descriptions. Evaluated syntax validity, relationship extraction, and hallucination rates.</p>
+            <div class="chips" style="margin-top: auto; margin-bottom: 1rem;">
+              <span class="chip">GPT-4 / Gemini</span>
+              <span class="chip">PlantUML</span>
+              <span class="chip">Software Eng.</span>
+              <span class="chip">Benchmarking</span>
+            </div>
+            <a class="btn" href="https://drive.google.com/file/d/1VIFG40L-g5WYTszbSPcuW43A__XCwPCh/view?usp=drive_link" target="_blank" rel="noopener">Read Paper &rarr;</a>
+          </article>
+
+          <!-- Project 4 -->
+          <article class="card project-card reveal" data-topics="data">
+            <div class="project-thumb">
+              <img src="assets/project-pest.svg" alt="Pest Incidence Prediction with Sentinel Satellite">
+            </div>
+            <h3>Pest Incidence Prediction</h3>
+            <p style="color: var(--primary); font-size: 0.85rem; font-weight: 600; margin-bottom: 0.5rem;">Satellite &amp; Weather Data · with WOTR</p>
+            <p>Predicted agricultural pest incidence across rural India by combining Sentinel-2 multispectral satellite imagery with longitudinal weather time series. Harmonized 150,000+ data points with XGBoost and Random Forest for precision agriculture early warnings.</p>
+            <div class="chips" style="margin-top: auto; margin-bottom: 1rem;">
+              <span class="chip">Sentinel-2</span>
+              <span class="chip">XGBoost</span>
+              <span class="chip">Geospatial</span>
+              <span class="chip">Agriculture</span>
+            </div>
+            <span class="btn" style="opacity: 0.7; cursor: default;">Precision Ag Deployment</span>
+          </article>
+
+          <!-- Project 5 -->
+          <article class="card project-card reveal d1" data-topics="hack">
+            <div class="project-thumb">
+              <img src="assets/project-musafir.svg" alt="Musafir Travel HackUPC Barcelona">
+            </div>
+            <h3>Musafir</h3>
+            <p style="color: var(--primary); font-size: 0.85rem; font-weight: 600; margin-bottom: 0.5rem;">HackUPC 2024 · Barcelona</p>
+            <p>A Python library integrating with TravelPerk APIs to optimize business travel. Features fastest flight discovery, multi-leg itinerary synthesis, smart hotel suggestions, and event networking integration built during a 36-hour sprint.</p>
+            <div class="chips" style="margin-top: auto; margin-bottom: 1rem;">
+              <span class="chip">Python</span>
+              <span class="chip">REST APIs</span>
+              <span class="chip">TravelPerk</span>
+              <span class="chip">Hackathon</span>
+            </div>
+            <a class="btn" href="https://github.com/ShreyaGautamm/Musafir" target="_blank" rel="noopener">GitHub Code &rarr;</a>
+          </article>
+
+          <!-- Project 6 -->
+          <article class="card project-card reveal d2" data-topics="hack">
+            <div class="project-thumb">
+              <img src="assets/project-griham.svg" alt="Griham Co-housing Figma prototype">
+            </div>
+            <h3>Griham Co-Housing</h3>
+            <p style="color: var(--primary); font-size: 0.85rem; font-weight: 600; margin-bottom: 0.5rem;">UPC Startup Challenge · Milan</p>
+            <p>An innovative co-housing platform connecting elderly homeowners, young professionals, and students with shared accommodations. Tenants reduce living costs by contributing to household chores. Designed end-to-end interactive mobile flows in Figma.</p>
+            <div class="chips" style="margin-top: auto; margin-bottom: 1rem;">
+              <span class="chip">Figma</span>
+              <span class="chip">UX / UI</span>
+              <span class="chip">Product Design</span>
+              <span class="chip">Startup Pitch</span>
+            </div>
+            <a class="btn" href="https://www.figma.com/design/bk8tB2ixXS3vIubjuIFf0l/Griham.com?node-id=0-1&p=f" target="_blank" rel="noopener">Figma Prototype &rarr;</a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+</body>
+</html>

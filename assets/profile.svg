@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" width="100%" height="100%">
+  <defs>
+    <linearGradient id="avatarBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2a0d2e"/>
+      <stop offset="50%" stop-color="#1f0923"/>
+      <stop offset="100%" stop-color="#0f0712"/>
+    </linearGradient>
+
+    <linearGradient id="accentGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f472b6"/>
+      <stop offset="100%" stop-color="#fb7185"/>
+    </linearGradient>
+
+    <linearGradient id="skinTone" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#d49b7a"/>
+      <stop offset="100%" stop-color="#be8060"/>
+    </linearGradient>
+
+    <linearGradient id="hairGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1c1917"/>
+      <stop offset="100%" stop-color="#09090b"/>
+    </linearGradient>
+
+    <linearGradient id="blazerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4a153b"/>
+      <stop offset="100%" stop-color="#230a1c"/>
+    </linearGradient>
+
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="320" height="320" rx="24" fill="url(#avatarBg)"/>
+
+  <!-- Halo / Network Arc -->
+  <circle cx="160" cy="160" r="130" fill="none" stroke="url(#accentGlow)" stroke-width="1.5" stroke-dasharray="4 6" opacity="0.45"/>
+  <circle cx="160" cy="160" r="145" fill="none" stroke="#f472b6" stroke-width="1" opacity="0.25"/>
+
+  <!-- Floating Sparks -->
+  <circle cx="50" cy="80" r="3" fill="#fb7185" opacity="0.85"/>
+  <circle cx="270" cy="70" r="3.5" fill="#f472b6" opacity="0.85"/>
+  <circle cx="280" cy="220" r="2.5" fill="#e879f9" opacity="0.75"/>
+  <circle cx="45" cy="230" r="2.5" fill="#f472b6" opacity="0.65"/>
+
+  <!-- Back Hair -->
+  <path d="M100 130 C90 190, 85 240, 95 270 C105 275, 120 270, 125 240 C125 210, 120 180, 120 160 Z" fill="url(#hairGrad)"/>
+  <path d="M220 130 C230 190, 235 240, 225 270 C215 275, 200 270, 195 240 C195 210, 200 180, 200 160 Z" fill="url(#hairGrad)"/>
+
+  <!-- Shoulders & Blazer -->
+  <path d="M60 320 C60 255, 105 235, 160 235 C215 235, 260 255, 260 320 Z" fill="url(#blazerGrad)"/>
+  <!-- Shirt Collar -->
+  <polygon points="160,235 140,280 160,295 180,280" fill="#fdf2f8"/>
+  <polygon points="160,235 130,240 145,285" fill="#831843"/>
+  <polygon points="160,235 190,240 175,285" fill="#831843"/>
+
+  <!-- Neck -->
+  <path d="M142 195 L142 245 C148 249, 172 249, 178 245 L178 195 Z" fill="url(#skinTone)"/>
+  <path d="M142 220 C152 230, 168 230, 178 220 L178 235 C170 240, 150 240, 142 235 Z" fill="#9e6648" opacity="0.3"/>
+
+  <!-- Face -->
+  <path d="M115 135 C115 80, 205 80, 205 135 C205 185, 185 215, 160 215 C135 215, 115 185, 115 135 Z" fill="url(#skinTone)"/>
+
+  <!-- Front Hair & Waves -->
+  <path d="M110 130 C105 75, 145 60, 160 60 C185 60, 215 75, 210 130 C205 95, 180 80, 160 82 C135 84, 120 100, 110 130 Z" fill="url(#hairGrad)"/>
+  <path d="M115 110 C130 90, 165 92, 185 105 C160 98, 135 100, 120 120 Z" fill="#292524"/>
+
+  <!-- Eyes & Eyebrows -->
+  <path d="M130 130 C135 127, 145 127, 150 131" stroke="#1c1917" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+  <path d="M170 131 C175 127, 185 127, 190 130" stroke="#1c1917" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+  
+  <ellipse cx="140" cy="140" rx="4" ry="4.5" fill="#1c1917"/>
+  <circle cx="141" cy="138" r="1.2" fill="#ffffff"/>
+  
+  <ellipse cx="180" cy="140" rx="4" ry="4.5" fill="#1c1917"/>
+  <circle cx="181" cy="138" r="1.2" fill="#ffffff"/>
+
+  <!-- Nose -->
+  <path d="M160 142 L157 165 C157 168, 163 168, 163 165" stroke="#9e6648" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+
+  <!-- Smile -->
+  <path d="M148 180 C154 187, 166 187, 172 180" stroke="#9f1239" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+
+  <!-- Subtle Glasses / Smart Accent -->
+  <rect x="126" y="130" width="28" height="20" rx="5" fill="none" stroke="#f472b6" stroke-width="1.6" opacity="0.9"/>
+  <rect x="166" y="130" width="28" height="20" rx="5" fill="none" stroke="#f472b6" stroke-width="1.6" opacity="0.9"/>
+  <line x1="154" y1="138" x2="166" y2="138" stroke="#f472b6" stroke-width="1.6" opacity="0.9"/>
+
+  <!-- Badge / Pin on Lapel -->
+  <circle cx="115" cy="275" r="5" fill="url(#accentGlow)"/>
+</svg>

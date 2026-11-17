@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="ragBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e1b4b"/>
+    </linearGradient>
+    <linearGradient id="ragCyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#818cf8"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="400" height="200" fill="url(#ragBg)"/>
+
+  <!-- Query Box -->
+  <g transform="translate(30, 70)">
+    <rect width="80" height="60" rx="8" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+    <text x="40" y="26" text-anchor="middle" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="11" font-weight="700">QUERY</text>
+    <rect x="15" y="36" width="50" height="4" rx="2" fill="#64748b"/>
+    <rect x="15" y="44" width="35" height="4" rx="2" fill="#64748b"/>
+  </g>
+
+  <!-- Flow Arrow 1 -->
+  <path d="M115 100 L155 100" stroke="#38bdf8" stroke-width="2" stroke-dasharray="4 3"/>
+  <polygon points="155,96 163,100 155,104" fill="#38bdf8"/>
+
+  <!-- Vector DB / Retrieval Node -->
+  <g transform="translate(165, 45)">
+    <rect width="90" height="110" rx="10" fill="#111827" stroke="#818cf8" stroke-width="1.5"/>
+    <text x="45" y="24" text-anchor="middle" fill="#818cf8" font-family="system-ui, sans-serif" font-size="10" font-weight="700">VECTOR DB</text>
+    <!-- Document Stack -->
+    <rect x="18" y="36" width="54" height="16" rx="4" fill="#1e293b" stroke="#334155"/>
+    <rect x="18" y="58" width="54" height="16" rx="4" fill="#312e81" stroke="#818cf8"/>
+    <rect x="18" y="80" width="54" height="16" rx="4" fill="#1e293b" stroke="#334155"/>
+    <circle cx="62" cy="66" r="3" fill="#38bdf8"/>
+  </g>
+
+  <!-- Flow Arrow 2 -->
+  <path d="M260 100 L295 100" stroke="#818cf8" stroke-width="2" stroke-dasharray="4 3"/>
+  <polygon points="295,96 303,100 295,104" fill="#818cf8"/>
+
+  <!-- LLM Answer Synthesis -->
+  <g transform="translate(305, 55)">
+    <rect width="70" height="90" rx="10" fill="#1e293b" stroke="url(#ragCyan)" stroke-width="2"/>
+    <circle cx="35" cy="30" r="14" fill="#818cf8" opacity="0.2"/>
+    <text x="35" y="34" text-anchor="middle" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="11" font-weight="800">LLM</text>
+    <rect x="12" y="54" width="46" height="4" rx="2" fill="#38bdf8"/>
+    <rect x="12" y="64" width="46" height="4" rx="2" fill="#94a3b8"/>
+    <rect x="12" y="74" width="28" height="4" rx="2" fill="#94a3b8"/>
+  </g>
+
+  <!-- RAG Badge -->
+  <g transform="translate(30, 25)">
+    <rect width="65" height="20" rx="10" fill="#38bdf8" opacity="0.15"/>
+    <text x="32" y="14" text-anchor="middle" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="9" font-weight="700">RAG PIPELINE</text>
+  </g>
+</svg>
