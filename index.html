@@ -735,56 +735,120 @@
       }
     }
 
-    .avatar {
-      aspect-ratio: 1;
-      max-width: 360px;
-      width: 100%;
+    .avatar-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.9rem;
       justify-self: center;
-      border-radius: 24px;
-      background: var(--accent-grad);
-      display: grid;
-      place-items: center;
-      font-size: 4.5rem;
-      font-weight: 800;
-      color: #fff;
-      box-shadow: var(--shadow);
-      position: relative;
-      overflow: hidden;
-      border: 2px solid var(--border);
+      width: 100%;
+      max-width: 380px;
     }
 
-    .avatar img {
+    .avatar {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      border-radius: 26px;
+      overflow: hidden;
+      border: 2px solid rgba(244, 114, 182, 0.45);
+      background: var(--surface-solid);
+      box-shadow: 0 16px 45px -10px rgba(244, 114, 182, 0.35), 0 0 25px -4px rgba(219, 39, 119, 0.25);
+      transition: transform .35s ease, box-shadow .35s ease, border-color .35s ease;
+    }
+
+    .avatar:hover {
+      transform: translateY(-4px);
+      border-color: var(--accent);
+      box-shadow: 0 22px 55px -10px rgba(244, 114, 182, 0.5), 0 0 35px -2px rgba(219, 39, 119, 0.35);
+    }
+
+    .avatar-photo {
       position: absolute;
       inset: 0;
       width: 100%;
       height: 100%;
       object-fit: cover;
-      z-index: 2;
-      border-radius: 22px;
-      transition: transform .4s ease;
+      object-position: center 62%;
+      filter: contrast(1.04) saturate(1.06) brightness(0.99);
+      transition: transform .45s ease, filter .45s ease, opacity .3s ease;
     }
 
-    .avatar:hover img {
-      transform: scale(1.04);
+    .avatar:hover .avatar-photo {
+      transform: scale(1.03);
     }
 
-    .avatar::after {
-      content: "";
+    .avatar-overlay {
       position: absolute;
-      inset: -40%;
-      background: conic-gradient(from 0deg, transparent, rgba(255, 255, 255, .25), transparent 30%);
-      animation: spin 8s linear infinite;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 62%, rgba(15, 10, 20, 0.78) 100%);
+      pointer-events: none;
+      z-index: 2;
     }
 
-    @keyframes spin {
-      to {
-        transform: rotate(360deg);
-      }
+    .avatar-badge {
+      position: absolute;
+      bottom: 1.1rem;
+      left: 1.1rem;
+      right: 1.1rem;
+      z-index: 3;
+      display: flex;
+      align-items: center;
+      gap: 0.55rem;
+      padding: 0.45rem 0.95rem;
+      border-radius: 999px;
+      background: rgba(15, 10, 20, 0.75);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid rgba(244, 114, 182, 0.35);
+      color: #fdf2f8;
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.01em;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.4);
     }
 
-    .avatar span {
-      position: relative;
-      z-index: 1;
+    .avatar-badge .badge-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #22c55e;
+      box-shadow: 0 0 8px #22c55e;
+      flex-shrink: 0;
+    }
+
+    .avatar-switcher {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.25rem 0.35rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      box-shadow: var(--shadow);
+    }
+
+    .switcher-btn {
+      font-family: inherit;
+      font-size: 0.8rem;
+      padding: 0.32rem 0.9rem;
+      border-radius: 999px;
+      border: none;
+      background: transparent;
+      color: var(--muted);
+      cursor: pointer;
+      transition: all .2s ease;
+      font-weight: 500;
+    }
+
+    .switcher-btn:hover {
+      color: var(--text);
+    }
+
+    .switcher-btn.active {
+      background: var(--accent-grad);
+      color: #fff;
+      box-shadow: 0 2px 8px var(--glow);
     }
 
     .card-visual {
@@ -1309,25 +1373,46 @@
       <div class="about-grid">
         <div class="reveal">
           <p>
-            I'm a Research Scientist at <strong>ISI Foundation</strong> in Turin, working on generative modelling for
-            humanitarian applications. I completed my <strong>MSc in Computer Science Engineering at Politecnico di
-              Milano</strong>
-            in March 2026, where my thesis studied gender bias in persona-conditioned LLM narratives across English and
-            Hindi.
+            I'm a Research Scientist at <strong>ISI Foundation</strong> in Turin, where I work on generative modelling
+            for
+            humanitarian applications. I completed my <strong>MSc in Computer Science and Engineering at Politecnico di
+              Milano</strong> in March 2026, where my thesis explored gender bias in persona-conditioned LLM narratives
+            across
+            English and Hindi.
           </p>
+
           <p>
-            Before that I did my BTech at BIT Mesra and research internships at the University of South Carolina and
-            Dalhousie University. My paper on AI-generated text detection won the <strong>Outstanding Paper Award at
-              EMNLP 2023</strong>.
+            My research journey began with NLP and machine learning, working on AI-generated text detection, fake news
+            detection,
+            and deception detection. I have also gained research experience through internships at the University of
+            South
+            Carolina and Dalhousie University. My work has resulted in publications at ACL and EMNLP, including a paper
+            that
+            received the <strong>EMNLP 2023 Outstanding Paper Award</strong>.
           </p>
+
           <p>
-            I'm drawn to work that puts careful evaluation first: measuring what models actually do, where they fail,
-            and who is affected. I bring academic depth and hands-on engineering to that goal.
+            My interests span <strong>NLP, LLMs, generative AI, trustworthy AI, and computational social
+              science</strong>.
+            I enjoy working across the research process, from identifying problems and developing methods to building
+            experiments and evaluating model behaviour. I'm particularly interested in understanding how AI systems
+            behave,
+            where they fail, and how we can make them more reliable, fair, and aligned with human expectations.
           </p>
         </div>
-        <div class="avatar reveal reveal-delay-1">
-          <img src="assets/profile.jpg" alt="Shreya Gautam" onerror="this.onerror=null; this.src='assets/profile.svg';">
-          <span>SG</span>
+        <div class="avatar-wrap reveal reveal-delay-1">
+          <div class="avatar" id="aboutAvatar">
+            <img id="avatarImg" src="assets/profile-duomo.jpg" alt="Shreya Gautam" class="avatar-photo" onerror="this.onerror=null; this.src='assets/profile.svg';">
+            <div class="avatar-overlay"></div>
+            <div class="avatar-badge" id="avatarBadge">
+              <span class="badge-dot"></span>
+              <span id="badgeText">Duomo di Milano · PoliMi</span>
+            </div>
+          </div>
+          <div class="avatar-switcher" aria-label="Switch profile photo">
+            <button class="switcher-btn active" data-photo="duomo" title="Milan Duomo portrait">Milan 📍</button>
+            <button class="switcher-btn" data-photo="sunset" title="Sunset in the mountains">Sunset 🌅</button>
+          </div>
         </div>
       </div>
     </div>
@@ -1965,6 +2050,31 @@
           requestAnimationFrame(frame);
         }
         requestAnimationFrame(frame);
+      }
+
+      var avatarImg = document.getElementById('avatarImg');
+      var badgeText = document.getElementById('badgeText');
+      if (avatarImg && badgeText) {
+        document.querySelectorAll('.switcher-btn').forEach(function (btn) {
+          btn.addEventListener('click', function () {
+            document.querySelectorAll('.switcher-btn').forEach(function (b) { b.classList.remove('active'); });
+            btn.classList.add('active');
+            var photo = btn.getAttribute('data-photo');
+            avatarImg.style.opacity = '0';
+            setTimeout(function () {
+              if (photo === 'sunset') {
+                avatarImg.src = 'assets/profile-sunset.jpg';
+                avatarImg.style.objectPosition = 'center 42%';
+                badgeText.textContent = 'Sunset · Golden Hour';
+              } else {
+                avatarImg.src = 'assets/profile-duomo.jpg';
+                avatarImg.style.objectPosition = 'center 62%';
+                badgeText.textContent = 'Duomo di Milano · PoliMi';
+              }
+              avatarImg.style.opacity = '1';
+            }, 180);
+          });
+        });
       }
 
     })();
