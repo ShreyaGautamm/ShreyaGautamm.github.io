@@ -362,16 +362,26 @@
 
     .nav-right {
       display: flex;
-      gap: 0.75rem;
+      gap: 0.5rem;
       align-items: center;
     }
 
-    .nav-cv-btn {
-      padding: 0.48rem 1.15rem;
-      font-size: 0.88rem;
-      font-weight: 600;
-      border-radius: 999px;
-      white-space: nowrap;
+    .nav-cv-link {
+      display: inline-flex !important;
+      align-items: center;
+      gap: 0.35rem;
+      color: var(--text) !important;
+      font-weight: 500;
+    }
+
+    .nav-cv-link .external-icon {
+      transition: transform .2s ease;
+      color: var(--accent);
+      flex-shrink: 0;
+    }
+
+    .nav-cv-link:hover .external-icon {
+      transform: translate(2px, -2px);
     }
 
     .icon-btn {
@@ -1340,9 +1350,16 @@
         <li><a href="#projects">Projects</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#contact">Contact</a></li>
+        <li>
+          <a class="nav-cv-link" href="cv.pdf" target="_blank" rel="noopener" title="Open and download CV in new tab">
+            Download CV
+            <svg class="external-icon" viewBox="0 0 16 16" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M5 3h8v8M13 3L4 12" />
+            </svg>
+          </a>
+        </li>
       </ul>
       <div class="nav-right">
-        <a class="btn primary nav-cv-btn" href="cv.pdf" target="_blank" rel="noopener">Download CV</a>
         <button class="icon-btn" id="themeToggle" aria-label="Toggle light and dark theme"
           title="Toggle theme">&#9680;</button>
         <button class="icon-btn menu-toggle" id="menuToggle" aria-label="Open menu">&#9776;</button>
