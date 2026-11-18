@@ -950,63 +950,205 @@
       display: none !important;
     }
 
-    .pub {
-      display: grid;
-      grid-template-columns: 46px 1fr;
-      gap: 1rem;
-      align-items: start;
+    /* Horizontal Academic Publications */
+    .pub-header-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding-bottom: 0.9rem;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 1.8rem;
     }
 
-    .pub-num {
-      width: 46px;
-      height: 46px;
-      border-radius: 12px;
-      display: grid;
-      place-items: center;
-      font-weight: 700;
-      background: var(--chip-bg);
-      color: var(--chip-text);
-    }
-
-    .pub h3 {
+    .pub-header-title {
       font-size: 1.05rem;
-      margin: 0 0 0.3rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: var(--text);
+      margin: 0;
     }
 
-    .pub .venue {
-      color: var(--accent);
+    .pub-header-years {
       font-size: 0.9rem;
-      font-weight: 600;
-    }
-
-    .pub .authors {
+      letter-spacing: 0.06em;
       color: var(--muted);
-      font-size: 0.9rem;
-      margin-top: 0.35rem;
+      font-weight: 500;
     }
 
-    .pub .authors strong {
+    .pub-list {
+      display: flex;
+      flex-direction: column;
+      gap: 2.2rem;
+    }
+
+    .pub-item {
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      gap: 2.2rem;
+      align-items: start;
+      padding-bottom: 2.2rem;
+      border-bottom: 1px solid var(--border);
+      transition: border-color .25s ease;
+    }
+
+    .pub-item:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    @media (max-width: 860px) {
+      .pub-item {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+      }
+    }
+
+    .pub-thumb-link {
+      display: block;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      background: var(--surface-solid);
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+      transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+      aspect-ratio: 16 / 10;
+      position: relative;
+    }
+
+    .pub-thumb-link:hover {
+      transform: translateY(-3px) scale(1.02);
+      border-color: var(--accent);
+      box-shadow: 0 8px 24px var(--glow);
+    }
+
+    .pub-thumb-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform .35s ease;
+    }
+
+    .pub-thumb-link:hover .pub-thumb-img {
+      transform: scale(1.03);
+    }
+
+    .pub-info {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .pub-tags {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.55rem;
+      flex-wrap: wrap;
+    }
+
+    .pub-tag-year {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: #0d9488;
+      background: rgba(13, 148, 136, 0.12);
+      border: 1px solid rgba(13, 148, 136, 0.28);
+      padding: 0.15rem 0.55rem;
+      border-radius: 4px;
+      letter-spacing: 0.04em;
+    }
+
+    [data-theme="dark"] .pub-tag-year {
+      color: #2dd4bf;
+      background: rgba(45, 212, 191, 0.12);
+      border-color: rgba(45, 212, 191, 0.28);
+    }
+
+    .pub-tag-venue {
+      font-size: 0.76rem;
+      font-weight: 600;
+      color: var(--muted);
+      background: var(--surface-solid);
+      border: 1px solid var(--border);
+      padding: 0.15rem 0.55rem;
+      border-radius: 4px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .pub-tag-award {
+      font-size: 0.74rem;
+      font-weight: 700;
+      background: linear-gradient(90deg, #d97706, #ea580c);
+      color: #fff;
+      padding: 0.18rem 0.65rem;
+      border-radius: 999px;
+      box-shadow: 0 2px 8px rgba(234, 88, 12, 0.35);
+    }
+
+    .pub-heading {
+      font-size: clamp(1.15rem, 1.4vw, 1.4rem);
+      font-weight: 600;
+      line-height: 1.35;
+      margin: 0 0 0.5rem;
       color: var(--text);
     }
 
-    .award {
-      display: inline-block;
-      margin-left: 0.4rem;
-      font-size: 0.75rem;
-      padding: 0.15rem 0.55rem;
-      border-radius: 999px;
-      background: linear-gradient(90deg, #f59e0b, #f97316);
-      color: #fff;
-      font-weight: 600;
-      vertical-align: middle;
+    .pub-heading a {
+      color: var(--text);
+      text-decoration: none;
+      transition: color .2s ease;
     }
 
-    .pub-links {
-      margin-top: 0.6rem;
+    .pub-heading a:hover {
+      color: var(--accent);
+      text-decoration: underline;
+    }
+
+    .pub-author-line {
+      font-size: 0.94rem;
+      color: var(--muted);
+      margin: 0 0 0.7rem;
+      line-height: 1.5;
+    }
+
+    .pub-author-line strong {
+      color: var(--text);
+      font-weight: 700;
+    }
+
+    .pub-summary {
+      font-size: clamp(0.92rem, 1.05vw, 1rem);
+      line-height: 1.65;
+      color: var(--muted);
+      margin: 0 0 0.9rem;
+    }
+
+    .pub-links-row {
       display: flex;
-      gap: 0.8rem;
+      align-items: center;
+      gap: 1.2rem;
       flex-wrap: wrap;
+    }
+
+    .pub-paper-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
       font-size: 0.9rem;
+      font-weight: 600;
+      color: #0d9488;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      transition: color .2s ease;
+    }
+
+    [data-theme="dark"] .pub-paper-link {
+      color: #2dd4bf;
+    }
+
+    .pub-paper-link:hover {
+      color: var(--accent);
     }
 
     .timeline {
@@ -1446,74 +1588,189 @@
 
   <section id="publications">
     <div class="container">
-      <h2 class="section-title reveal">Publications</h2>
-      <p class="section-sub reveal">Peer-reviewed papers. Filter by topic.</p>
+      <div class="pub-header-row reveal">
+        <h2 class="pub-header-title">PUBLICATIONS</h2>
+        <span class="pub-header-years">2023 — 2027</span>
+      </div>
 
-      <div class="filters reveal" data-group="pubs">
+      <div class="filters reveal" data-group="pubs" style="margin-bottom: 2.2rem;">
         <button class="filter-btn active" data-filter="all">All</button>
         <button class="filter-btn" data-filter="llm">LLMs &amp; NLP</button>
         <button class="filter-btn" data-filter="rai">Responsible AI</button>
         <button class="filter-btn" data-filter="ml">Applied ML</button>
       </div>
 
-      <div class="grid-2" data-list="pubs">
-        <article class="card item pub tilt reveal" data-topics="llm">
-          <div class="pub-num">1</div>
-          <div>
-            <h3>SEPSIS: I Can Catch Your Lies – A New Paradigm for Deception Detection</h3>
-            <div class="venue">ACL 2025 Student Research Workshop, pp. 97–128</div>
-            <div class="authors">Rani, A., Dalal, D., <strong>Gautam, S.</strong>, Gupta, P., Jain, V., Chadha, A.,
-              Sheth, A., &amp; Das, A.</div>
-            <div class="pub-links"><a href="https://aclanthology.org/2025.acl-srw.7/">ACL Anthology</a><a
-                href="https://doi.org/10.18653/v1/2025.acl-srw.7">DOI</a></div>
+      <div class="pub-list" data-list="pubs">
+
+        <!-- Publication 1: EACL 2027 -->
+        <article class="pub-item item reveal" data-topics="llm rai">
+          <a class="pub-thumb-link" href="https://arxiv.org/abs/2604.23600" target="_blank" rel="noopener"
+            title="Open paper on arXiv">
+            <img class="pub-thumb-img" src="assets/pub-bias.svg"
+              alt="Personality-conditioned gender bias methodology architecture" loading="lazy">
+          </a>
+          <div class="pub-info">
+            <div class="pub-tags">
+              <span class="pub-tag-year">2027</span>
+              <span class="pub-tag-venue">EACL 2027</span>
+              <span class="pub-tag-venue">ARXIV</span>
+            </div>
+            <h3 class="pub-heading">
+              <a href="https://arxiv.org/abs/2604.23600" target="_blank" rel="noopener">
+                Personality Shapes Gender Bias in Persona-Conditioned LLM Narratives Across English and Hindi: An Empirical Investigation
+              </a>
+            </h3>
+            <p class="pub-author-line">
+              Kumar, T.*, <strong>Gautam, S.</strong>*, Chadha, A., Jain, V., &amp; Pierri, F. <span style="opacity:0.75;">(* equal contribution)</span>
+            </p>
+            <p class="pub-summary">
+              A multilingual benchmark of 23,400+ LLM-generated narratives across 50 occupations in English and Hindi. Finds that Dark Triad traits amplify occupational gender bias by up to 27% across six state-of-the-art LLMs, while Honesty-Humility mitigates stereotypical outputs, evaluated via a novel centroid-based metric and BERTScore.
+            </p>
+            <div class="pub-links-row">
+              <a class="pub-paper-link" href="https://arxiv.org/abs/2604.23600" target="_blank" rel="noopener">
+                arXiv:2604.23600 ↗
+              </a>
+            </div>
           </div>
         </article>
 
-        <article class="card item pub tilt reveal reveal-delay-1" data-topics="llm rai">
-          <div class="pub-num">2</div>
-          <div>
-            <h3>Counter Turing Test (CT²): AI-Generated Text Detection is Not as Easy as You May Think – Introducing AI
-              Detectability Index <span class="award">Outstanding Paper Award</span></h3>
-            <div class="venue">EMNLP 2023, pp. 2206–2239</div>
-            <div class="authors">Chakraborty, M., Tonmoy, S. M. T. I., Zaman, S. M. M., Sharma, K., Barman, N. R.,
-              Gupta, C., <strong>Gautam, S.</strong>, Kumar, T., Jain, V., Chadha, A., Sheth, A. P., &amp; Das, A.</div>
-            <div class="pub-links"><a href="https://aclanthology.org/2023.emnlp-main.136/">ACL Anthology</a><a
-                href="https://doi.org/10.18653/v1/2023.emnlp-main.136">DOI</a></div>
+        <!-- Publication 2: ACL 2025 -->
+        <article class="pub-item item reveal" data-topics="llm">
+          <a class="pub-thumb-link" href="https://aclanthology.org/2025.acl-srw.7/" target="_blank" rel="noopener"
+            title="Open paper on ACL Anthology">
+            <img class="pub-thumb-img" src="assets/pub-sepsis.svg"
+              alt="SEPSIS deception detection framework architecture" loading="lazy">
+          </a>
+          <div class="pub-info">
+            <div class="pub-tags">
+              <span class="pub-tag-year">2025</span>
+              <span class="pub-tag-venue">ACL 2025</span>
+              <span class="pub-tag-venue">STUDENT RESEARCH WORKSHOP</span>
+            </div>
+            <h3 class="pub-heading">
+              <a href="https://aclanthology.org/2025.acl-srw.7/" target="_blank" rel="noopener">
+                SEPSIS: I Can Catch Your Lies – A New Paradigm for Deception Detection
+              </a>
+            </h3>
+            <p class="pub-author-line">
+              Rani, A., Dalal, D., <strong>Gautam, S.</strong>, Gupta, P., Jain, V., Chadha, A., Sheth, A., &amp; Das, A.
+            </p>
+            <p class="pub-summary">
+              Introduces SEPSIS, a novel deception detection framework modeling linguistic leakage cues, psychological markers, and cognitive load indicators across multi-party conversational dialogue to differentiate deceptive claims from truthful narratives.
+            </p>
+            <div class="pub-links-row">
+              <a class="pub-paper-link" href="https://aclanthology.org/2025.acl-srw.7/" target="_blank" rel="noopener">
+                ACL Anthology ↗
+              </a>
+              <a class="pub-paper-link" href="https://doi.org/10.18653/v1/2025.acl-srw.7" target="_blank" rel="noopener">
+                DOI ↗
+              </a>
+            </div>
           </div>
         </article>
 
-        <article class="card item pub tilt reveal" data-topics="llm rai">
-          <div class="pub-num">3</div>
-          <div>
-            <h3>Personality Shapes Gender Bias in Persona-Conditioned LLM Narratives Across English and Hindi: An
-              Empirical Investigation</h3>
-            <div class="venue">Findings of EACL 2027 (arXiv:2604.23600)</div>
-            <div class="authors"><strong>Gautam, S.</strong>*, Kumar, T.*, Chadha, A., Jain, V., &amp; Pierri, F. (*
-              equal contribution)</div>
-            <div class="pub-links"><a href="https://arxiv.org/abs/2604.23600">arXiv</a></div>
+        <!-- Publication 3: EMNLP 2023 Outstanding Paper -->
+        <article class="pub-item item reveal" data-topics="llm rai">
+          <a class="pub-thumb-link" href="https://aclanthology.org/2023.emnlp-main.136/" target="_blank" rel="noopener"
+            title="Open paper on ACL Anthology">
+            <img class="pub-thumb-img" src="assets/pub-ct2.svg"
+              alt="Counter Turing Test detectability pipeline architecture" loading="lazy">
+          </a>
+          <div class="pub-info">
+            <div class="pub-tags">
+              <span class="pub-tag-year">2023</span>
+              <span class="pub-tag-venue">EMNLP 2023</span>
+              <span class="pub-tag-award">🏆 Outstanding Paper Award</span>
+            </div>
+            <h3 class="pub-heading">
+              <a href="https://aclanthology.org/2023.emnlp-main.136/" target="_blank" rel="noopener">
+                Counter Turing Test (CT²): AI-Generated Text Detection is Not as Easy as You May Think – Introducing AI Detectability Index
+              </a>
+            </h3>
+            <p class="pub-author-line">
+              Chakraborty, M., Tonmoy, S. M. T. I., Zaman, S. M. M., Sharma, K., Barman, N. R., Gupta, C., <strong>Gautam, S.</strong>, Kumar, T., Jain, V., Chadha, A., Sheth, A. P., &amp; Das, A.
+            </p>
+            <p class="pub-summary">
+              Examines the vulnerability of state-of-the-art AI-generated text detectors against evolving LLMs under adversarial perturbations. Introduces the AI Detectability Index (ADI) to establish a calibrated benchmark for measuring detector reliability and robustness.
+            </p>
+            <div class="pub-links-row">
+              <a class="pub-paper-link" href="https://aclanthology.org/2023.emnlp-main.136/" target="_blank" rel="noopener">
+                ACL Anthology ↗
+              </a>
+              <a class="pub-paper-link" href="https://doi.org/10.18653/v1/2023.emnlp-main.136" target="_blank" rel="noopener">
+                DOI ↗
+              </a>
+            </div>
           </div>
         </article>
 
-        <article class="card item pub tilt reveal reveal-delay-1" data-topics="llm">
-          <div class="pub-num">4</div>
-          <div>
-            <h3>FACTIFY-5WQA: 5W Aspect-based Fact Verification through Question Answering</h3>
-            <div class="venue">ACL 2023 (Long Papers), pp. 10421–10440</div>
-            <div class="authors">Rani, A., Tonmoy, S. M. T. I., Dalal, D., <strong>Gautam, S.</strong>, Chakraborty, M.,
-              Chadha, A., Sheth, A., &amp; Das, A.</div>
-            <div class="pub-links"><a href="https://aclanthology.org/2023.acl-long.581/">ACL Anthology</a><a
-                href="https://doi.org/10.18653/v1/2023.acl-long.581">DOI</a></div>
+        <!-- Publication 4: ACL 2023 Long Papers -->
+        <article class="pub-item item reveal" data-topics="llm">
+          <a class="pub-thumb-link" href="https://aclanthology.org/2023.acl-long.581/" target="_blank" rel="noopener"
+            title="Open paper on ACL Anthology">
+            <img class="pub-thumb-img" src="assets/pub-factify.svg"
+              alt="FACTIFY-5WQA aspect decomposition architecture" loading="lazy">
+          </a>
+          <div class="pub-info">
+            <div class="pub-tags">
+              <span class="pub-tag-year">2023</span>
+              <span class="pub-tag-venue">ACL 2023</span>
+              <span class="pub-tag-venue">LONG PAPERS</span>
+            </div>
+            <h3 class="pub-heading">
+              <a href="https://aclanthology.org/2023.acl-long.581/" target="_blank" rel="noopener">
+                FACTIFY-5WQA: 5W Aspect-based Fact Verification through Question Answering
+              </a>
+            </h3>
+            <p class="pub-author-line">
+              Rani, A., Tonmoy, S. M. T. I., Dalal, D., <strong>Gautam, S.</strong>, Chakraborty, M., Chadha, A., Sheth, A., &amp; Das, A.
+            </p>
+            <p class="pub-summary">
+              Presents a structured aspect-based fact verification approach that decomposes multimodal news claims into 5W aspects (Who, What, When, Where, Why), leveraging targeted question-answering pipelines to provide fine-grained, explainable fact-checking verdicts.
+            </p>
+            <div class="pub-links-row">
+              <a class="pub-paper-link" href="https://aclanthology.org/2023.acl-long.581/" target="_blank" rel="noopener">
+                ACL Anthology ↗
+              </a>
+              <a class="pub-paper-link" href="https://doi.org/10.18653/v1/2023.acl-long.581" target="_blank" rel="noopener">
+                DOI ↗
+              </a>
+            </div>
           </div>
         </article>
 
-        <article class="card item pub tilt reveal" data-topics="ml">
-          <div class="pub-num">5</div>
-          <div>
-            <h3>ML-based IoT Framework for Diabetes Detection</h3>
-            <div class="venue">Wireless Personal Communications (Springer)</div>
-            <div class="pub-links"><a href="https://www.researchsquare.com/article/rs-3024165/v1">Preprint</a></div>
+        <!-- Publication 5: Springer 2023 -->
+        <article class="pub-item item reveal" data-topics="ml">
+          <a class="pub-thumb-link" href="https://www.researchsquare.com/article/rs-3024165/v1" target="_blank" rel="noopener"
+            title="Open paper preprint on Research Square">
+            <img class="pub-thumb-img" src="assets/pub-iot.svg"
+              alt="ML-based IoT framework architecture" loading="lazy">
+          </a>
+          <div class="pub-info">
+            <div class="pub-tags">
+              <span class="pub-tag-year">2023</span>
+              <span class="pub-tag-venue">SPRINGER</span>
+              <span class="pub-tag-venue">WIRELESS PERSONAL COMMUNICATIONS</span>
+            </div>
+            <h3 class="pub-heading">
+              <a href="https://www.researchsquare.com/article/rs-3024165/v1" target="_blank" rel="noopener">
+                ML-based IoT Framework for Diabetes Detection
+              </a>
+            </h3>
+            <p class="pub-author-line">
+              <strong>Gautam, S.</strong>, et al.
+            </p>
+            <p class="pub-summary">
+              An automated end-to-end framework uniting IoT physiological sensors with AutoML and neural classification models. Compares EvalML and GridSearchCV hyperparameter optimization for early, accurate non-invasive diabetes screening.
+            </p>
+            <div class="pub-links-row">
+              <a class="pub-paper-link" href="https://www.researchsquare.com/article/rs-3024165/v1" target="_blank" rel="noopener">
+                Preprint / Research Square ↗
+              </a>
+            </div>
           </div>
         </article>
+
       </div>
     </div>
   </section>
