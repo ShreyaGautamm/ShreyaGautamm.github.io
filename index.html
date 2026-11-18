@@ -1134,6 +1134,111 @@
       color: var(--accent);
     }
 
+    /* Horizontal Education Timeline */
+    .edu-timeline {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3.5rem;
+      position: relative;
+      padding-top: 2rem;
+      margin-top: 1rem;
+    }
+
+    .edu-timeline::before {
+      content: "";
+      position: absolute;
+      top: 6px;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: var(--border);
+    }
+
+    .edu-col {
+      position: relative;
+    }
+
+    .edu-col::before {
+      content: "";
+      position: absolute;
+      top: -2rem;
+      left: 0;
+      width: 13px;
+      height: 13px;
+      border-radius: 50%;
+      transform: translateY(-50%) translateY(6px);
+      background: var(--bg);
+      border: 2px solid var(--muted);
+      z-index: 2;
+      transition: all .25s ease;
+    }
+
+    .edu-col.active::before {
+      background: #0d9488;
+      border-color: #0d9488;
+      box-shadow: 0 0 0 4px rgba(13, 148, 136, 0.22);
+    }
+
+    [data-theme="dark"] .edu-col.active::before {
+      background: #2dd4bf;
+      border-color: #2dd4bf;
+      box-shadow: 0 0 0 4px rgba(45, 212, 191, 0.25);
+    }
+
+    .edu-years {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--muted);
+      letter-spacing: 0.04em;
+      margin-bottom: 0.55rem;
+    }
+
+    .edu-col.active .edu-years {
+      color: #0d9488;
+    }
+
+    [data-theme="dark"] .edu-col.active .edu-years {
+      color: #2dd4bf;
+    }
+
+    .edu-degree {
+      font-size: clamp(1.2rem, 1.45vw, 1.42rem);
+      font-weight: 700;
+      line-height: 1.3;
+      margin: 0 0 0.4rem;
+      color: var(--text);
+    }
+
+    .edu-school {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 0.3rem;
+    }
+
+    .edu-meta {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--muted);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 0.85rem;
+    }
+
+    .edu-desc {
+      font-size: 0.94rem;
+      line-height: 1.65;
+      color: var(--muted);
+      margin: 0;
+    }
+
+    @media (max-width: 768px) {
+      .edu-timeline {
+        grid-template-columns: 1fr;
+        gap: 2.8rem;
+      }
+    }
+
     .timeline {
       position: relative;
       padding-left: 2rem;
@@ -1470,6 +1575,7 @@
       <a class="brand" href="#top">Shreya<span>.</span>Gautam</a>
       <ul class="nav-links" id="navLinks">
         <li><a href="#publications">Publications</a></li>
+        <li><a href="#education">Education</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#skills">Skills</a></li>
@@ -1756,6 +1862,64 @@
     </div>
   </section>
 
+  <section id="education">
+    <div class="container">
+      <h2 class="section-title reveal">Education</h2>
+      <p class="section-sub reveal">Degrees and academic background</p>
+
+      <div class="edu-timeline reveal">
+        <!-- Degree 1: MSc -->
+        <div class="edu-col active">
+          <div class="edu-years">2023 — 2026</div>
+          <h3 class="edu-degree">MSc, Computer Science Engineering</h3>
+          <div class="edu-school">Politecnico di Milano</div>
+          <div class="edu-meta">Milan, Italy</div>
+          <p class="edu-desc">
+            Thesis: <em>Personality Shapes Gender Bias in Persona-Conditioned LLM Narratives Across English and Hindi</em>. Advisor: Prof. Francesco Pierri.<br>
+            Focus in Generative Modelling, Natural Language Processing, Machine Learning, and Responsible AI.
+          </p>
+        </div>
+
+        <!-- Degree 2: BTech -->
+        <div class="edu-col">
+          <div class="edu-years">2019 — 2023</div>
+          <h3 class="edu-degree">B.Tech., Computer Science Engineering</h3>
+          <div class="edu-school">Birla Institute of Technology (BIT Mesra)</div>
+          <div class="edu-meta">Ranchi, India · Advisor: Prof. Kanhaiya Lal</div>
+          <p class="edu-desc">
+            Undergraduate coursework in Data Structures, Algorithms, Machine Learning, Operating Systems, and Database Management. Research on ML-based IoT healthcare systems.
+          </p>
+        </div>
+      </div>
+
+      <!-- Honours & Scholarships subsection -->
+      <div style="margin-top: 3.5rem;">
+        <h3 class="reveal" style="font-size: 1.25rem; margin-bottom: 1.2rem; font-weight: 600; color: var(--text);">Honours &amp; Scholarships</h3>
+        <div class="grid-3">
+          <div class="card tilt award-card reveal">
+            <div class="big">&#127942;</div>
+            <h3>Outstanding Paper Award</h3>
+            <div class="meta">EMNLP 2023 · Singapore</div>
+            <p>For the Counter Turing Test (CT²) paper evaluating AI-generated text detection.</p>
+          </div>
+          <div class="card tilt award-card reveal reveal-delay-1">
+            <div class="big">&#127891;</div>
+            <h3>Lagrange Applied Research Scholarship</h3>
+            <div class="meta">Fondazione ISI · 2026–2027</div>
+            <p>Applied research in conditional normalizing flows for humanitarian data estimation.</p>
+          </div>
+          <div class="card tilt award-card reveal reveal-delay-2">
+            <div class="big">&#11088;</div>
+            <h3>Grace Hopper Celebration India 2024</h3>
+            <div class="meta">Advancing Inclusion Scholarship</div>
+            <p>Recognising commitment to diversity, equity, and inclusion in technology.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
   <section id="experience">
     <div class="container">
       <h2 class="section-title reveal">Experience</h2>
@@ -1933,41 +2097,6 @@
               href="https://www.figma.com/design/bk8tB2ixXS3vIubjuIFf0l/Griham.com?node-id=0-1&p=f">Design &rarr;</a>
           </div>
         </article>
-      </div>
-    </div>
-  </section>
-
-  <section id="education">
-    <div class="container">
-      <h2 class="section-title reveal">Education &amp; Awards</h2>
-      <p class="section-sub reveal">Degrees and recognition</p>
-      <div class="grid-2">
-        <div class="card tilt reveal">
-          <h3>MSc, Computer Science Engineering</h3>
-          <div class="meta">Politecnico di Milano, Milan · Sep 2023 – Mar 2026</div>
-          <p>Thesis: <em>Personality Shapes Gender Bias in Persona-Conditioned LLM Narratives Across English and
-              Hindi</em>. Advisor: Prof. Francesco Pierri.</p>
-        </div>
-        <div class="card tilt reveal reveal-delay-1">
-          <h3>BTech, Computer Science Engineering</h3>
-          <div class="meta">Birla Institute of Technology (BIT Mesra), Ranchi · Aug 2019 – Aug 2023</div>
-        </div>
-        <div class="card tilt award-card reveal">
-          <div class="big">&#127942;</div>
-          <h3>Outstanding Paper Award, EMNLP 2023</h3>
-          <p>For the Counter Turing Test (CT²) paper, presented in Singapore.</p>
-        </div>
-        <div class="card tilt award-card reveal reveal-delay-1">
-          <div class="big">&#127891;</div>
-          <h3>Lagrange Applied Research Scholarship</h3>
-          <p>Awarded for applied research work. Current project: synthetic household food security data for Mozambique
-            using conditional normalizing flows.</p>
-        </div>
-        <div class="card tilt award-card reveal">
-          <div class="big">&#11088;</div>
-          <h3>Grace Hopper Celebration India 2024</h3>
-          <p>Advancing Inclusion Scholarship, recognising my commitment to diversity and inclusion in technology.</p>
-        </div>
       </div>
     </div>
   </section>
