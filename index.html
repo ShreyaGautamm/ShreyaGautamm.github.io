@@ -1402,7 +1402,8 @@
         </div>
         <div class="avatar-wrap reveal reveal-delay-1">
           <div class="avatar" id="aboutAvatar">
-            <img id="avatarImg" src="assets/profile-duomo.jpg" alt="Shreya Gautam" class="avatar-photo" onerror="this.onerror=null; this.src='assets/profile.svg';">
+            <img id="avatarImg" src="assets/profile-duomo.jpg" alt="Shreya Gautam" class="avatar-photo"
+              onerror="this.onerror=null; this.src='assets/profile.svg';">
             <div class="avatar-overlay"></div>
             <div class="avatar-badge" id="avatarBadge">
               <span class="badge-dot"></span>
@@ -1411,7 +1412,7 @@
           </div>
           <div class="avatar-switcher" aria-label="Switch profile photo">
             <button class="switcher-btn active" data-photo="duomo" title="Milan Duomo portrait">Milan 📍</button>
-            <button class="switcher-btn" data-photo="sunset" title="Sunset in the mountains">Sunset 🌅</button>
+            <button class="switcher-btn" data-photo="sunset" title="Sunset in the mountains">Shimla 📍</button>
           </div>
         </div>
       </div>
@@ -2064,12 +2065,12 @@
             setTimeout(function () {
               if (photo === 'sunset') {
                 avatarImg.src = 'assets/profile-sunset.jpg';
-                avatarImg.style.objectPosition = 'center 42%';
-                badgeText.textContent = 'Sunset · Golden Hour';
+                avatarImg.style.objectPosition = 'center 82%';
+                badgeText.textContent = 'Shimla · India';
               } else {
-                avatarImg.src = 'assets/profile-duomo.jpg';
+                avatarImg.src = 'assets/profile-duomo-alt.jpg';
                 avatarImg.style.objectPosition = 'center 62%';
-                badgeText.textContent = 'Duomo di Milano · PoliMi';
+                badgeText.textContent = 'Duomo di Milano · Italy';
               }
               avatarImg.style.opacity = '1';
             }, 180);
